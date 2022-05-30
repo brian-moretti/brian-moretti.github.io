@@ -343,15 +343,15 @@ footer i {
     padding-right: 0;
   }
   .project-container img {
-    width: 360px;
-    height: 270px;
+    width: 480px;
+    height: 390px;
   }
   .contact-info {
     width: 100%;
     padding: 0;
   }
   .contact-me {
-    padding: 25px 60px;
+    padding: 25px 40px;
     height: auto;
   }
   .contact-address {
