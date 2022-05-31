@@ -144,6 +144,7 @@ nav {
 
 .project-container{
   position: relative;
+  display: flex;
 
   &:hover .button{
     display: inline-block;
@@ -172,7 +173,7 @@ nav {
   padding: 15px 30px;
   text-decoration: none;
   color: $color-primary;
-  z-index: 99;
+  z-index: 1;
   font-family: $font-secondary;
 }
 
@@ -217,16 +218,17 @@ nav {
     color: $color-secondary;
 
   }
+}
 
-  h3{
-    font-family: $font-secondary;
-    background-color: $color-ter;
-    color: $color-primary;
-    font-size: 20px;
-    border-radius: 10px 100px / 120px;
-    padding: 15px;
-    text-align: center;
-  }
+.cta{
+  font-family: $font-secondary;
+  background-color: $color-ter;
+  color: $color-primary;
+  font-size: 20px;
+  border-radius: 10px 100px / 120px;
+  padding: 15px;
+  text-align: center;
+  margin-right: 40px;
 }
 
 .contact-picture{
@@ -249,7 +251,7 @@ nav {
 
 
 .contact-address {
-  margin: 60px 0 30px 0;
+  margin: 30px 0;
   text-align: left;
   font-family: $font-primary;
   font-size: 20px;
@@ -334,7 +336,6 @@ footer {
       &:hover ul{
         display: flex;
         flex-direction: column;
-        //justify-content: space-between;
       }
     }
 
@@ -357,7 +358,7 @@ footer {
 
     > .presentation{
       margin-top: 0;
-      padding: 20px 60px 0 60px;
+      padding: 20px 40px 0 40px;
       text-align: justify;
     }
 
@@ -371,11 +372,7 @@ footer {
     position: relative;
     left: 20%;
 
-  /*  position: absolute;
-    top: 15%;
-    left: 70%;*/
   }
-
 
 
 #anchor-1{
@@ -385,46 +382,59 @@ footer {
 
 .portfolio{
   p{
-    padding: 20px 60px;
+    padding: 20px 40px;
     text-align: justify;
   }
 }
 
-.contact-presentation{
-  padding-right: 0;
-}
 .project-container img{
-  width: 480px;
-  height: 390px;
+  width: 360px;
+  height: 270px;
 }
 
-  .contact-info {
-    width: 100%;
-    padding: 0;
-  }
+.contact-me{
+  height: auto;
+  padding: 0;
+}
 
-  .contact-me {
-    padding: 25px 40px;
-    height: auto;
-  }
+.contact-info{
+  width: 100%;
+  padding: 0;
+}
+
+.contact-presentation{
+  padding: 20px 40px;
+}
+
+.cta{
+  margin: 0;
+}
 .contact-address{
-  margin: 20px 0;
+  padding: 0 40px;
 }
+
+.contact-link{
+  padding: 0 40px 20px 40px;
+}
+
   .contact-picture{
     display: none;
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1200px){
+@media only screen and (min-width: 768px) and (max-width: 1200px){
 
   .intro {
-    //align-items: center;
     padding: 0;
     height: auto;
   }
 
   .intro-info{
     width: 180%;
+  }
+
+  #anchor-1{
+    bottom: 0;
   }
   .contact-me {
     padding: 25px;
