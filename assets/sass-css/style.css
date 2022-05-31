@@ -342,6 +342,9 @@ footer i {
     width: 360px;
     height: 270px;
   }
+  .button {
+    left: 20%;
+  }
   .contact-me {
     height: auto;
     padding: 0;

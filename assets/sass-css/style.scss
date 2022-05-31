@@ -301,7 +301,6 @@ footer {
 
 /*responsive*/
 
-
 @media only screen and (min-width: 768px){
 
   .intro img.mobile{
@@ -390,6 +389,10 @@ footer {
 .project-container img{
   width: 360px;
   height: 270px;
+}
+
+.button{
+  left: 20%;
 }
 
 .contact-me{
