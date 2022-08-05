@@ -1,0 +1,101 @@
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    background-image: url('/assets/images/counter-star.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+h2{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 5;
+    font-family: 'Caveat', cursive;
+    font-size: 50px;
+    color: whitesmoke;
+
+}
+
+.counter{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    transform: translateY(40%);
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    box-shadow: 0 0 100px 10px whitesmoke;
+ 
+
+}
+
+.counter-output{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    color: whitesmoke;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 20%;
+    border-radius: 15px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 35px;
+    border: 1px solid whitesmoke ;
+    box-shadow: 0 0 50px 3px whitesmoke inset;
+
+}
+
+.counter-value{
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    align-items: center;
+    width: 300px;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 45%;
+    border-radius: 20px;
+    border: 1px solid whitesmoke;
+    box-shadow: 0 0 80px 3px whitesmoke inset;
+
+
+
+}
+
+.add-value, .reduce-value{
+    border-radius: 50%;
+    border: 0.5px solid whitesmoke;
+    background-color: #0f5b8a;
+    padding: 20px;
+    cursor: pointer;
+    font-family: 'Inconsolata', monospace;
+    font-size: 22px;
+    color: whitesmoke;
+}
+
+.reset{
+    border: 0.5px solid #0f5b8a;
+    background-color: rgba(245, 245, 245, 0.6);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Inconsolata', monospace;
+    font-size: 21px;
+    font-weight: 600;
+    color: #0f5b8a;
+}
