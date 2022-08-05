@@ -26,7 +26,6 @@ nav {
   width: 30%;
   position: relative;
 }
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -37,12 +36,10 @@ nav ul {
   font-weight: 400;
   font-size: 1.1em;
 }
-
 nav ul a {
   text-decoration: none;
   color: #382a29;
 }
-
 nav ul a:hover {
   color: #a02b15;
   text-decoration: underline;
@@ -70,19 +67,16 @@ nav ul a:hover {
   position: relative;
   width: 70%;
 }
-
 .intro-info h2 {
   margin-top: 50px;
-  font-family: "Special Elite", cursive;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   color: #a02b15;
   padding-right: 80px;
 }
-
 .intro-info .presentation {
   margin-top: 80px;
 }
-
 .intro-info .presentation p {
   font-family: "Forum", cursive;
   font-size: 20px;
@@ -107,14 +101,12 @@ nav ul a:hover {
 .portfolio {
   position: relative;
 }
-
 .portfolio h2 {
   text-align: center;
   padding: 20px 0;
   color: #a02b15;
-  font-family: "Special Elite", cursive;
+  font-family: "Nunito Sans", sans-serif;
 }
-
 .portfolio p {
   padding: 20px 160px;
   font-family: "Forum", cursive;
@@ -126,7 +118,6 @@ nav ul a:hover {
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .projects div {
   margin: 0 15px 30px;
 }
@@ -135,11 +126,9 @@ nav ul a:hover {
   position: relative;
   display: flex;
 }
-
 .project-container:hover .button {
   display: inline-block;
 }
-
 .project-container:hover .button:hover + .project-item {
   opacity: 0.5;
 }
@@ -195,9 +184,8 @@ nav ul a:hover {
   position: relative;
   padding-right: 50px;
 }
-
 .contact-presentation h2 {
-  font-family: "Special Elite", cursive;
+  font-family: "Nunito Sans", sans-serif;
   font-size: 32px;
   text-decoration: underline;
   color: #a02b15;
@@ -208,7 +196,7 @@ nav ul a:hover {
   background-color: #382a29;
   color: #e1d1c7;
   font-size: 20px;
-  border-radius: 10px 100px / 120px;
+  border-radius: 10px 100px/120px;
   padding: 15px;
   text-align: center;
   margin-right: 40px;
@@ -222,11 +210,9 @@ nav ul a:hover {
 .contact-link {
   font-size: 24px;
 }
-
 .contact-link a {
   text-decoration: none;
 }
-
 .contact-link a i {
   color: #a02b15;
 }
@@ -237,25 +223,21 @@ nav ul a:hover {
   font-family: "Forum", cursive;
   font-size: 20px;
 }
-
 .contact-address span {
   display: inline-block;
   margin-top: 10px;
   font-family: "Merriweather", serif;
 }
-
 .contact-address i {
   color: #a02b15;
   font-size: 18px;
 }
-
 .contact-address a {
   text-decoration: none;
   color: inherit;
   font-weight: 600;
   margin: 0 10px;
 }
-
 .contact-address a:hover {
   color: #a02b15;
 }
@@ -269,7 +251,6 @@ footer {
   font-size: 20px;
   letter-spacing: 1.2px;
 }
-
 footer i {
   color: #e1d1c7;
   background-color: #382a29;
@@ -286,7 +267,6 @@ footer i {
     display: none;
   }
 }
-
 @media only screen and (max-width: 768px) {
   nav {
     width: auto;
@@ -369,7 +349,6 @@ footer i {
     display: none;
   }
 }
-
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .intro {
     padding: 0;
@@ -388,4 +367,4 @@ footer i {
   .contact-info {
     width: 180%;
   }
-}
+}/*# sourceMappingURL=style.css.map */
