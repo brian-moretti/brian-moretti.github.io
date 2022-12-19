@@ -19,7 +19,8 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: inherit;
+  border: red 1px solid;
+  height: 12vh;
 }
 
 nav {
