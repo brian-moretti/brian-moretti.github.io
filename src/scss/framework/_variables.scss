@@ -1,0 +1,34 @@
+@import "mixins";
+
+$color-one: #f7a501;
+$color-two: #1a1c1e;
+$color-three: #f9f9f9;
+$color-html: #898989;
+
+@font-face {
+    font-family: "Allura";
+    src: url(/src/fonts/Allura-Regular.ttf);
+    font-weight: 100;
+  }
+  
+  @font-face {
+    font-family: "Didact";
+    src: url(/src/fonts/DidactGothic-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: "Open";
+    src: url(/src/fonts/OpenSans.ttf);
+    font-weight: 600;
+  }
+  
+  @font-face {
+    font-family: "Azonix";
+    src: url(/src/fonts/Azonix.otf);
+  }
+
+$font-future: "Azonix";
+$font-primary: "Open";
+$font-html: "Allura";
+$font-text: "Didact";
+

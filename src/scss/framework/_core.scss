@@ -1,0 +1,588 @@
+@use "scrollbar";
+@use "loader";
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: $color-two;
+}
+
+.title {
+  font-family: $font-primary;
+}
+
+.textP {
+  font-family: $font-text;
+}
+
+//* MENU SIDEBAR + MENU BUTTON < 1024PX
+
+menu {
+  position: fixed;
+  background-color: $color-one;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  width: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  z-index: 10;
+  transform: translateY(100%);
+  transition: all 0.75s linear;
+}
+
+#brand {
+  text-align: center;
+  margin-top: 2em;
+}
+
+#brand a {
+  text-decoration: none;
+}
+
+#brand a > span {
+  color: $color-one;
+  background-color: $color-two;
+  display: block;
+  padding: 0.2em 0;
+  font-size: 1.3em;
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+#brand > span {
+  margin-top: 0.4em;
+  font-family: $font-future;
+  font-size: 0.7em;
+}
+
+#navLink {
+  display: inherit;
+  flex-direction: inherit;
+  border-top: 2px solid $color-two;
+}
+
+#navLink a {
+  border-bottom: 2px solid $color-two;
+  text-align: center;
+  padding: 12px 10px;
+  display: block;
+  font-size: 1em;
+  text-decoration: none;
+  color: $color-two;
+  font-family: $font-primary;
+}
+
+#navLink a:hover {
+  background-color: $color-two;
+  color: $color-one;
+  transition: all 0.5s linear;
+}
+
+.social {
+  display: inherit;
+  flex-direction: row;
+  height: 8em;
+  list-style-type: none;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.social a {
+  color: $color-two;
+  font-size: 1.4em;
+  margin: 4px;
+  padding: 6px;
+  transition: all 0.5s linear;
+  border-radius: 50%;
+}
+.social a:hover {
+  background-color: $color-two;
+  color: $color-one;
+  border-radius: 50%;
+}
+
+.social li {
+  position: relative;
+}
+
+.social li:nth-child(1)::after {
+  content: "Profilo GitHub";
+  @include socialOverlay;
+}
+
+.social li:nth-child(1):hover::after {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+.social li:nth-child(2)::after {
+  content: "Profilo LinkedIn";
+  @include socialOverlay;
+}
+
+.social li:nth-child(2):hover::after {
+  opacity: 1;
+  transition: all 0.3s linear;
+}
+
+#copyright {
+  font-family: $font-future;
+  font-weight: 400;
+  font-size: 0.6em;
+  display: block;
+  text-align: center;
+  padding-bottom: 1em;
+}
+#showMenu {
+  position: fixed;
+  top: 10px;
+  right: 25px;
+  cursor: pointer;
+  padding: 7.2px;
+  border-radius: 6px;
+  display: none;
+  border: 0.5px solid $color-three;
+  background-color: $color-one;
+  z-index: 10;
+}
+
+.arrow {
+  display: block;
+  width: 22px;
+  background-color: $color-two;
+  height: 2.1px;
+  margin: 5px 0;
+}
+
+#showMenu .arrow {
+  transition: all 0.5s ease-in-out;
+}
+
+#showMenu.open {
+  background-color: $color-two;
+}
+
+#showMenu.open .arrow {
+  background-color: $color-three;
+}
+
+#showMenu.open .arrow:nth-child(1) {
+  rotate: 90deg;
+  translate: -7px 7px;
+  width: 20px;
+}
+
+#showMenu.open .arrow:nth-child(2) {
+  rotate: 135deg;
+}
+
+#showMenu.open .arrow:nth-child(3) {
+  translate: 2px 2px;
+  width: 20px;
+}
+
+.responsive {
+  display: flex;
+  width: 100%;
+  z-index: 10;
+}
+
+.scrolled {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-color: $color-two;
+}
+
+//* TOP & BOTTOM TAG HTML
+
+.top-tag {
+  @include tagHTML(top, left, 0, 0);
+  margin: 15px 0 0 30px;
+  font-size: 1.1em;
+}
+
+.top-tag::after {
+  content: "<body>";
+  @include tagHTML(top, left, 25px, 10px);
+  font-size: 1em;
+}
+
+#bottom {
+  position: relative;
+  margin-left: 10em;
+}
+
+.bottom-tag {
+  @include tagHTML(bottom, left, 0, 0);
+  margin: 0 0 15px 30px;
+  font-size: 1.1em;
+}
+
+.bottom-tag::after {
+  content: "</body>";
+  @include tagHTML(bottom, left, 25px, 10px);
+  font-size: 1em;
+}
+
+//* CLASS SHARED BETWEEN SECTIONS
+
+.section {
+  height: 100vh;
+  margin-left: 10em;
+  padding: 6em 5em;
+  position: relative;
+  scroll-snap-align: end;
+  background-color: $color-two;
+}
+
+.section:first-of-type {
+  padding: 9em 5em;
+}
+
+.containerElements{
+  flex: 1;
+}
+
+.containerElements h2 {
+  font-size: 2.2em;
+  margin-bottom: 1em;
+  position: relative;
+  color: $color-one;
+}
+
+.containerElements h2::before {
+  @include htmlElement("<h2>", 1rem);
+  top: -15px;
+  left: -20px;
+}
+
+.containerElements h2::after {
+  @include htmlElement("</h2>", 1rem);
+  bottom: -10px;
+}
+.containerElements p {
+  position: relative;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: left;
+  margin-bottom: 4em;
+  color: $color-three;
+}
+
+.containerElements p::before {
+  @include htmlElement("<p>", 1em);
+  top: -15px;
+  left: -20px;
+}
+
+.containerElements p::after {
+  @include htmlElement("</p>", 1em);
+  bottom: -20px;
+  left: -20px;
+}
+
+//* FRONT PAGE STYLE
+
+#frontPage h1 {
+  display: inline-block;
+  position: relative;
+}
+
+#frontPage h1::before {
+  @include htmlElement("<h1>", 0.8em);
+  top: -12px;
+  left: -17px;
+}
+
+#frontPage h1::after {
+  @include htmlElement("</h1>", 0.8em);
+  bottom: -10px;
+}
+
+.showing {
+  transition: all 0.5s ease-out;
+  font-size: 2.5em;
+  display: inherit;
+  line-height: 1.2em;
+  color: $color-three;
+  opacity: 0;
+}
+
+.showing:nth-child(8) {
+  margin-right: 20px;
+}
+
+.showing:nth-child(14) {
+  margin-right: 20px;
+}
+
+.showing:nth-child(23) {
+  margin-right: 20px;
+}
+
+//! CREARE ANIMAZIONE TITOLO PRINCIPALE ON HOVER
+
+#job {
+  position: relative;
+  padding: 2.5em 0;
+  font-family: $font-future;
+  margin-bottom: 4em;
+  color: $color-one;
+}
+
+#job::before {
+  @include htmlElement("<p>", 1.2em);
+  top: 20px;
+  left: -17px;
+}
+
+#job::after {
+  @include htmlElement("</p>", 1.2em);
+  bottom: 15px;
+  left: -22px;
+}
+
+//* CONTACT BUTTON - FRONT PAGE STYLE
+
+.link {
+  text-decoration: none;
+  color: $color-one;
+  display: inline-block;
+  border: 1px solid $color-one;
+  padding: 1em 4em;
+  font-size: 1.2em;
+  position: relative;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: $color-one;
+}
+
+.link:hover::after {
+  background-color: $color-two;
+}
+
+.bg {
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10px;
+  background-color: $color-one;
+  transform: skewX(-10deg);
+}
+.text {
+  display: inline-block;
+}
+.link:hover .text {
+  color: $color-two;
+  transform: scale(1.1, 1.1);
+}
+.link:hover .bg {
+  width: 140%;
+  transition: 0.3s all linear;
+}
+
+//* ABOUT-PAGE + SKILL STYLING
+
+#myself {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  position: relative;
+}
+
+#skillContainer {
+  min-width: 35vw;
+  min-height: 35vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  width: fit-content;
+  filter: grayscale(1);
+  z-index: 1;
+  position: absolute;
+  opacity: 0;
+  @include skill-animation;
+}
+
+.skill img {
+  width: 100px;
+}
+
+.skill:hover {
+  filter: grayscale(0);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 75px 5px $color-three inset;
+  border-radius: 50%;
+  padding: 0.5em;
+}
+
+#hideSkill {
+  @include hide;
+}
+
+//* PORTFOLIO STYLE
+
+#works {
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.box {
+  border: 2px solid $color-one;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 1px $color-one;
+  min-width: 25vw;
+  max-width: 30vw;
+  text-align: center;
+  margin: 0 10px;
+}
+
+.box:hover {
+  background-color: $color-one;
+  box-shadow: 0 0 10px 1px $color-three;
+  transition: all 0.5s linear;
+}
+
+.box h3 {
+  color: $color-one;
+  font-size: 1.5em;
+  filter: drop-shadow(1.5px 1.5px $color-one);
+}
+.box:hover h3 {
+  color: $color-two;
+  filter: drop-shadow(1.5px 1.5px $color-three);
+  transition: all 0.5s linear;
+}
+.box span {
+  color: $color-three;
+  display: block;
+  margin: 5px 0;
+  font-family: $font-text;
+  font-weight: 600;
+}
+
+.box:hover span {
+  color: $color-two;
+  transition: all 0.5s linear;
+}
+.box:last-of-type:hover img {
+  background-image: url("/src/images/project-hover.svg");
+}
+.box a {
+  display: block;
+  text-decoration: none;
+  margin: 10px auto;
+  width: fit-content;
+ //filter: drop-shadow(0 0 0.5px $color-three);
+  padding: 1em;
+}
+
+//* CONTACT SECTION STYLE
+
+#contact{
+  display: flex;
+}
+
+#contactBtn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //gap: 1em;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contact {
+  border: 2px solid $color-one;
+  border-radius: 12px;
+  box-shadow: 0 0 10px 1px $color-one;
+  min-width: 25vw;
+  max-width: 30vw;
+  text-align: center;
+  margin: 0 10px;
+  font-family: $font-primary;
+}
+
+.contact:hover {
+  background-color: $color-one;
+  box-shadow: 0 0 10px 1px $color-three;
+  transition: all 0.5s linear;
+}
+
+.contact h5 {
+  color: $color-three;
+  font-weight: 600;
+  font-size: 1.4em;
+  filter: drop-shadow(1.5px 1.5px $color-one);
+}
+.contact:hover h5 {
+  color: $color-two;
+  filter: drop-shadow(1.5px 1.5px $color-three);
+  transition: all 0.5s linear;
+}
+
+.contact a {
+  display: block;
+  text-decoration: none;
+  filter: drop-shadow(0 0 0.9px $color-three);
+  margin: 10px auto;
+  padding: 1em;
+}
+
+.contact span {
+  color: $color-three;
+  display: block;
+  font-size: 1.5em;
+  border-radius: 50%;
+  border: 1px solid;
+  width: fit-content;
+  margin: 0.5em auto;
+}
+.contact span > i {
+  padding: 0.5em;
+}
+.contact:hover span {
+  color: $color-one;
+  transition: all 0.5s linear;
+  background-color: $color-two;
+  @include animation-contact;
+}
+
+#hideForm {
+  @include hide;
+}
+
+@import "../pages/project";
+@import "../pages/portfolio";
+@import "../pages/singleWork";
+@import "../layout/all";

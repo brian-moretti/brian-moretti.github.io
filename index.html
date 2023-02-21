@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Brian Moretti - Front End Dev</title>
+    <link
+      rel="shortcut icon"
+      href="/src/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/scss/style.scss" />
+    <script
+      src="https://kit.fontawesome.com/d2cc7bd70b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <span class="textLoader"></span>
+    </div>
+
+    <!-- <div id="loader" class="wrapper">
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+    </div> -->
+    
+    <header>
+      <menu id="header" class="">
+        <div id="brand">
+          <a href="" rel="noopener noreferrer"
+            ><img
+              src="/src/images/logo.png"
+              alt="Brian Moretti Logo - PC Coding"
+              width="120px"
+            />
+            <span>Brian Moretti</span>
+          </a>
+          <span>Web Developer</span>
+        </div>
+        <nav id="navLink">
+          <a href="#myself">About</a>
+          <a href="#worksProject">Progetti</a>
+          <a href="#contact">Contatti</a>
+        </nav>
+        <ul class="social">
+          <li>
+            <a
+              href="https://github.com/brian-moretti"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="" target="_blank" rel="noopener noreferrer"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+        </ul>
+        <span id="copyright">&#169; Brian Moretti</span>
+      </menu>
+    </header>
+
+    <button id="showMenu">
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+      <span class="arrow"></span>
+    </button>
+
+    <div id="fullPage" class="scrolled">
+      <section id="frontPage" class="section">
+        <span class="top-tag">&lt;html&gt;</span><br />
+        <h1 id="title" class="title">
+          <span class="showing">C</span>
+          <span class="showing">i</span>
+          <span class="showing">a</span>
+          <span class="showing">o</span>
+          <span class="showing">,</span>
+          <br />
+          <span class="showing">M</span>
+          <span class="showing">i</span>
+          <span class="showing">c</span>
+          <span class="showing">h</span>
+          <span class="showing">i</span>
+          <span class="showing">a</span>
+          <span class="showing">m</span>
+          <span class="showing">o</span>
+          <span class="showing">B</span>
+          <span class="showing">r</span>
+          <span class="showing">i</span>
+          <span class="showing">a</span>
+          <span class="showing">n</span>
+          <br />
+          <span class="showing">W</span>
+          <span class="showing">e</span>
+          <span class="showing">b</span>
+          <span class="showing">D</span>
+          <span class="showing">e</span>
+          <span class="showing">v</span>
+          <span class="showing">e</span>
+          <span class="showing">l</span>
+          <span class="showing">o</span>
+          <span class="showing">p</span>
+          <span class="showing">e</span>
+          <span class="showing">r</span>
+        </h1>
+        <p id="job">Front-End Developer | Sviluppatore Siti Web</p>
+
+        <a href="#contact" class="link">
+          <span class="bg"></span>
+          <span class="text">Contattami</span></a
+        >
+      </section>
+
+      <section id="myself" class="section">
+        <div class="containerElements">
+          <h2 class="title">Io, Me e Me Stesso</h2>
+          <p class="textP">
+            Ciao! Mi chiamo Brian e il mio obiettivo è quello di creare la TUA
+            &lt;identità&gt; digitale nel Web. L'interesse e la passione nella
+            creazione di Siti Web e nello "Sviluppo Web" sono iniziati nel 2022
+            quando mi sono iscritto al Master in "Front-End" di
+            <a>Start2Impact University</a>. Lo studio dei linguaggi di
+            programmazione e la realizzazione di progetti mi ha permesso di
+            scoprire la bellezza, la difficolta e l'impegno dietro ogni singola
+            applicazione, ma soprattutto la soddisfazione nel creare un qualcosa
+            che prende vita da dei semplici codici! Sono alla ricerca di
+            collaborazioni, grandi o piccole che siano, con aziende, attività
+            locali o liberi professionisti. Quando non sono impegnato a
+            "trackerare"... Mi puoi trovare ad alzare pesi in palesta, a
+            prendere a "ceffoni" le mie congas, a ballare caraibico oppure in
+            escursione sulle montagne.
+          </p>
+        </div>
+        <div id="skillContainer">
+          <!-- <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span>
+          <span class="skill"><img src="" width="100px" alt="" /></span> -->
+          <span id="hideSkill" class="overlay">SKILLS</span>
+        </div>
+      </section>
+      <section id="worksProject" class="section">
+        <div class="containerElements">
+          <h2 class="title">Portfolio</h2>
+          <p class="textP">
+            Qui puoi trovare una selezione di progetti, personali e non, realizzati durante
+            il mio percorso di studio
+          </p>
+          <div id="works">
+            <div class="box">
+              <a href="/progetti-star2impact/" target="_blank">
+                <h3 class="title">Progetti</h3>
+                <span class="textP"
+                  >Progetti realizzati per il "Master Front-End"</span
+                >
+                <img src="/src/images/start2impact.svg" alt="" width="150px"
+              /></a>
+            </div>
+            <!-- <div class="box">
+              <h3>Projects</h3>
+              <span>Progetti realizzati per il "Master Front-End"</span>
+              <a href=""
+                ><img src="/images/start2impact.svg" alt="" width="150px"
+              /></a>
+            </div> -->
+            <div class="box">
+              <a href="/portfolio/" target="_blank">
+                <h3 class="title">Portfolio</h3>
+                <span class="textP"
+                  >Lavori realizzati per alcune aziende / attività locali</span
+                ><img src="/src/images/project-hover.svg" alt="" width="150px"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="containerElements">
+          <h2 class="title">Contattami</h2>
+          <p class="textP">
+            Vuoi realizzare un Sito Web per la tua attività? Vuoi lanciare la
+            tua attività online? Sono interessato a qualsiasi opportunità,
+            piccola o grande che sia, pertanto non esitare a contattarmi Non
+            vedo l'ora di poter collaborare con te! Compila il modulo per
+            fornirmi alcune indicazioni sul priogetto che vorresti realizzare
+            che trovi nel link qui <span>accanto</span> oppure scrivimi
+            direttamente un messaggio per email :).
+          </p>
+        </div>
+        <div id="contactBtn">
+          <div class="contact">
+            <a href="">
+              <h5 class="title">Compila il modulo</h5>
+              <span><i class="fa-regular fa-keyboard"></i></span>
+            </a>
+          </div>
+          <div class="contact">
+            <a href="mailto:morettibrian.web@gmail.com">
+              <h5 class="title">Scrivimi</h5>
+              <span><i class="fa-solid fa-paper-plane"></i></span>
+            </a>
+          </div>
+          <span id="hideForm">&#64;</span>
+        </div>
+      </section>
+      <div id="bottom">
+        <span class="bottom-tag">&lt;/html&gt;</span>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

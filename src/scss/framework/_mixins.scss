@@ -1,0 +1,90 @@
+@mixin socialOverlay {
+  position: absolute;
+  width: 200%;
+  top: 30px;
+  left: -20px;
+  text-align: center;
+  font-size: 0.6em;
+  background-color: $color-three;
+  border: 0.5px solid $color-two;
+  color: $color-two;
+  padding: 0.3em 0;
+  opacity: 0;
+}
+
+@mixin hide{
+    position: absolute;
+    font-size: 4.5em;
+    opacity: 0.35;
+    color: $color-one;
+    z-index: 0;
+    font-family: $font-future;
+}
+
+@mixin tagHTML($posY, $posX, $valueY, $valueX) {
+  position: absolute;
+  #{$posY}: $valueY;
+  #{$posX}: $valueX;
+  font-family: $font-html;
+  color: $color-html;
+}
+
+@mixin htmlElement($content, $size) {
+  content: $content;
+  position: absolute;
+  font-size: $size;
+  font-weight: 100;
+  font-family: $font-html;
+  color: $color-html;
+}
+
+@mixin animation-contact {
+  $name: bounce;
+
+  @keyframes #{$name} {
+    0% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+  animation: $name 0.5s linear infinite alternate;
+}
+
+@mixin skill-animation() {
+  $name: circular;
+
+  @keyframes #{$name} {
+    0% {
+      transform: rotate(0deg) translateX(17vw) rotate(0deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(-360deg) translateX(17vw) rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  animation: circular linear infinite;
+}
+
+@mixin skill-animation-mobile() {
+  $name: circular-mobile;
+
+  @keyframes #{$name} {
+    0% {
+      transform: rotate(0deg) translateX(27vw) rotate(0deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(-360deg) translateX(27vw) rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+  animation: circular-mobile linear infinite;
+}

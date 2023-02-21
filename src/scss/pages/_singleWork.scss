@@ -1,0 +1,278 @@
+.sectionWork {
+  height: 100vh;
+  margin-left: 10em;
+  padding: 9em 5em;
+  position: relative;
+  scroll-snap-align: end;
+  display: flex;
+  justify-content: space-between;
+}
+
+.imageBox {
+  align-self: center;
+  background: rgba($color: $color-one, $alpha: 0.5);
+  border-radius: 80% 20% 25% 75% / 50% 20% 80% 50% 
+}
+.imageBox img {
+  width: 35vw;
+}
+.mobile {
+  width: fit-content;
+  margin: 0 auto;
+  transform: translateY(-40px);
+}
+.sectionWork div {
+  //flex: 1;
+}
+
+.work-details {
+  position: relative;
+}
+
+.work-details::before {
+  @include htmlElement("<details>", 1.2em);
+  top: -50px;
+  left: -25px;
+}
+
+.work-details::after {
+  @include htmlElement("</details>", 1.2em);
+  bottom: -50px;
+  left: -25px;
+}
+
+.single-detail {
+  display: flex;
+  width: 75vw;
+  justify-content: space-between;
+  margin: 2em auto;
+}
+
+.scope {
+  flex: 0.5;
+}
+
+.title-detail {
+  color: $color-one;
+  font-family: $font-future;
+  position: relative;
+  font-size: 1.25em;
+}
+
+.title-detail::before {
+  content: "";
+  width: 35px;
+  height: 1.5px;
+  display: block;
+  background-color: $color-one;
+  margin-bottom: 0.5em;
+}
+
+.explained {
+  flex: 1.2;
+  font-family: $font-text;
+  color: $color-three;
+  font-size: 1.05em;
+}
+
+.explained::before {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  display: block;
+  background-color: $color-html;
+  margin-bottom: 0.5em;
+}
+
+.explained a {
+  text-decoration: none;
+  color: $color-one;
+  display: block;
+  width: fit-content;
+}
+
+.explained span {
+  display: block;
+  margin-top: 1em;
+}
+
+.explained ul {
+  margin-left: 2em;
+}
+
+//* MODULO RICHIEDI SITO
+.containerAsk {
+  margin: 2em 0 2em 10em;
+  padding: 2em 0;
+}
+
+.webAsk {
+  width: 70vw;
+  border-radius: 8px;
+  border: 2px solid $color-one;
+  box-shadow: 0 0 10px 3px $color-three;
+  margin: 0 auto;
+  padding: 1.2em;
+  min-height: 55vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.webAsk h2 {
+  font-family: $font-primary;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+  color: $color-one;
+}
+
+.listBenefit {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1em;
+  font-size: 1.1em;
+  justify-content: center;
+  font-family: $font-text;
+}
+
+.listBenefit li {
+  padding: 0.5em 1em;
+  border: 0.5px solid $color-one;
+  border-radius: 16px;
+  color: $color-one;
+}
+
+.listBenefit li > i {
+  margin-right: 0.4em;
+}
+
+.webAsk a {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: $font-future;
+  border: 0.5px solid $color-one;
+  padding: 0.8em 1.3em;
+  border-radius: 8px;
+  transition: all 0.5s linear;
+  margin-top: 1.2em;
+  background-color: $color-one;
+  color: $color-two;
+}
+
+.webAsk a:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.webAsk span {
+  transform: translateY(-20px);
+  font-size: 1.05em;
+  font-family: $font-text;
+  color: $color-html;
+}
+
+//* NAVIGAZIONE PORTFOLIO
+#worksNav {
+  margin-left: 10em;
+}
+
+#worksNav ul {
+  display: flex;
+  margin: 0 auto;
+  width: 75vw;
+  border: 1px solid red;
+  border-radius: 8px;
+  justify-content: space-between;
+  list-style: none;
+  padding: 2.5em 0;
+}
+
+#workNav li {
+  display: flex;
+  flex-direction: column;
+}
+
+#workNav li > span,
+a {
+  // display: block;
+}
+
+@media only screen and (max-width: 1024px) {
+  .sectionWork {
+    padding: 7em 4em;
+    margin-left: 0;
+  }
+
+  .explained ul {
+    margin-left: 1em;
+  }
+
+  .containerAsk {
+    margin: 0;
+  }
+  .webAsk h2 {
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+    text-align: center;
+  }
+
+  .listBenefit li {
+    text-align: center;
+  }
+
+  .webAsk a {
+    margin-top: 1.8em;
+    text-align: center;
+  }
+  .webAsk span {
+    transform: none;
+    margin-top: 1.2em;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 785px) {
+  .mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 784px) {
+  .sectionWork {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .single-detail {
+    flex-direction: column;
+    gap: 1.5em;
+    margin: 3.5em auto;
+  }
+  .explained::before {
+    display: none;
+  }
+
+  .noMobile {
+    display: none;
+  }
+
+  .imageBox img {
+    width: 60vw;
+  }
+
+  .listBenefit li {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 671px) {
+  .sectionWork {
+    padding: 9em 4em;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .sectionWork {
+    padding: 9em 2em 6em 2em;
+  }
+}

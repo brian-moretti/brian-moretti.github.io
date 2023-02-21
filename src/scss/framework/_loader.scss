@@ -1,0 +1,99 @@
+@import "variables";
+
+//! CODE STYLE FOR LOADER
+
+//* TYPING TEXT LOADER
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 3;
+    background-color: $color-two;
+    color: $color-one;
+    transition: all 1s linear;
+    opacity: 1;
+  }
+  
+  .container .textLoader {
+    position: relative;
+    color: $color-one;
+    font-size: 30px;
+    height: max-content;
+    font-family: "Azonix";
+    transition: all 3s linear;
+    opacity: 1;
+  }
+  
+  .textLoader::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color-two;
+    border-left: 2px solid $color-three;
+    animation: animate 5s steps(30) 1;
+  }
+  
+  @keyframes animate {
+    40%,
+    60% {
+      left: calc(100% + 10px);
+    }
+    90%,
+    100% {
+      left: 0px;
+    }
+  }
+  
+  //*  CIRCLE LOADER
+  /*#loader {
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      z-index: 3;
+      background-color: $color-two;
+      color: $color-one;  
+    }
+  
+    .loader {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px solid $color-one;
+      //background-color: darkgreen;
+      height: 120px;
+      width: 200px;
+      animation: ripples 3s 2 linear;
+      opacity: 0;
+      
+    }
+    
+    .loader:nth-child(1) {
+      animation-delay: 1s;
+    }
+    .loader:nth-child(2) {
+      animation-delay: 2s;
+    }
+    .loader:nth-child(3) {
+      animation-delay: 3s;
+    }
+    
+    @keyframes ripples {
+      0% {
+        transform: scale(0, 0);
+        opacity: 0.25;
+      }
+      100% {
+        opacity: 0.25;
+        transform: scale(1, 1);
+      }
+    }*/
+  
