@@ -5,6 +5,7 @@ import {
   createOddElement,
 } from "./createElement";
 import { menu } from "./sidebarMenu";
+import * as masterImages from "../images/master-project/master-project";
 import { footer } from "./copyright";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,8 @@ window.addEventListener("DOMContentLoaded", () => {
     createProject(element);
   });
 });
+
+let masterProject = Object.entries(masterImages);
 
 class Project {
   constructor(id, title, link, src, name, description, language, githubLink) {

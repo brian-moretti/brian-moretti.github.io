@@ -19,6 +19,7 @@ import vite from "./skills/vite.svg";
 
 export { html, css, js, sass, jquery, git, wordpress, vite };
 
+/*
 //* MASTER PROJECT
 import counterOfStars from "./master-project/counter-of-stars.png";
 import portfolioWebsite from "./master-project/portfolio-website.png";
@@ -34,5 +35,5 @@ import mockupSeteco from "./mockup-portfolio/mockup-seteco.png";
 import mockupAura from "./mockup-portfolio/mockup-studio-aura.png";
 
 export { mockupCogesca, mockupMtp, mockupOdontoiatria, mockupSeteco, mockupAura };
-
+*/
 //? È possibile creare una funzione per automatizzare l'import / export delle immagini nella cartella
