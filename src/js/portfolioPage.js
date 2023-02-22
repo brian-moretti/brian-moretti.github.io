@@ -1,6 +1,13 @@
 import { createElement, createImage, createLink } from "./createElement";
 import { menu } from "./sidebarMenu";
-import { footer } from './copyright';
+import {
+  cogesca,
+  mtp,
+  odontoiatria,
+  seteco,
+  aura,
+} from "../images/mockup-portfolio/mockup-portfolio";
+import { footer } from "./copyright";
 
 window.addEventListener("DOMContentLoaded", () => {
   menu.style.transform = "translateY(0)";
@@ -29,25 +36,25 @@ class Portfolio {
 let setecoService = new Portfolio(
   "Seteco Service Srl",
   "/portfolio/studio-seteco-service/",
-  "/src/images/mockup-portfolio/mockup-seteco.png",
+  seteco,
   ["Mobile Responsive", "Sito Web One-Page", "Ottimizzazione SEO"]
 );
 let ambulatorioAura = new Portfolio(
   "Ambulatorio Odontoiatrico Aura",
   "/portfolio/ambulatorio-aura/",
-  "/src/images/mockup-portfolio/mockup-studio-aura.png",
+  aura,
   ["Mobile Responsive", "Sito Web Multi-Page", "Ottimizzazione SEO"]
 );
-let odontoiatria = new Portfolio(
+let odontoiatriaProgresso = new Portfolio(
   "Odontoiatria e Progresso",
   "/portfolio/odontoiatria-progresso/",
-  "/src/images/mockup-portfolio/mockup-odontoiatria.png",
+  odontoiatria,
   ["Mobile Responsive", "Sito Web Multi-Page", "Ottimizzazione SEO"]
 );
 let cogescaAppalti = new Portfolio(
   "Cogesca Appalti Srl",
   "/portfolio/cogesca-appalti/",
-  "/src/images/mockup-portfolio/mockup-cogesca.png",
+  cogesca,
   ["Mobile Responsive", "Sito Web One-Page", "Ottimizzazione SEO"]
 );
 let studioTassi = new Portfolio(
@@ -59,7 +66,7 @@ let studioTassi = new Portfolio(
 let mptAmbulatorio = new Portfolio(
   "MTP Ambulatorio Odontoiatrico",
   "/portfolio/mtp-ambulatorio-odontoiatrico/",
-  "/src/images/mockup-portfolio/mockup-mtp.png",
+  mtp,
   ["Mobile Responsive", "Sito Web Multi-Page", "Ottimizzazione SEO"]
 );
 let developer = new Portfolio("Brian Moretti - Web Developer", "/", "/", "/");
@@ -67,7 +74,7 @@ let developer = new Portfolio("Brian Moretti - Web Developer", "/", "/", "/");
 let arrayPortfolio = [
   setecoService,
   ambulatorioAura,
-  odontoiatria,
+  odontoiatriaProgresso,
   cogescaAppalti,
   studioTassi,
   mptAmbulatorio,

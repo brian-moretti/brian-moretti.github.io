@@ -26,10 +26,13 @@
   .section {
     margin-left: 0;
     padding: 6em 4em;
+    scroll-snap-align: none;
+    height: fit-content;
   }
 
   .section:first-of-type {
     padding: 7em 4em;
+    height: 100vh;
   }
 
   .top-tag {
@@ -63,7 +66,7 @@
   #contactBtn {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5em;
+    gap: 6em;
   }
 
   .contact {
@@ -165,11 +168,13 @@
 //? LAYOUT INTERMEDIO PER PROGETTI...
 
 @media only screen and (max-width: 784px) {
-  .section {
+  /*   .section {
     scroll-snap-align: none;
     height: fit-content;
   }
-
+  .section:first-of-type {
+    height: 100vh;
+  } */
   .showing {
     font-size: 2.3em;
   }
@@ -297,6 +302,10 @@
     margin: 2em 0 0 5px;
   }
 
+  #job{
+    font-size: .9em;
+  }
+
   #contact-me {
     margin: 0 auto;
     padding: 1em 2.5em;
@@ -327,13 +336,13 @@
 
 @media only screen and (max-width: 376px) {
   .showing {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .showing {
-    font-size: 1.4rem;
+    font-size: 0.8em;
   }
 }
 

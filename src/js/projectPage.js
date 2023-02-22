@@ -5,7 +5,11 @@ import {
   createOddElement,
 } from "./createElement";
 import { menu } from "./sidebarMenu";
-import * as masterImages from "../images/master-project/master-project";
+import {
+  portfolioWebsite,
+  counterOfStars,
+  theBookCamp,
+} from "../images/master-project/master-project";
 import { footer } from "./copyright";
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -22,8 +26,6 @@ window.addEventListener("DOMContentLoaded", () => {
     createProject(element);
   });
 });
-
-let masterProject = Object.entries(masterImages);
 
 class Project {
   constructor(id, title, link, src, name, description, language, githubLink) {
@@ -43,7 +45,7 @@ let projectHTMLCSS = new Project(
   1,
   "Progetto HTML / CSS",
   "https://project-portfolio-website.netlify.app/",
-  "/src/images/master-project/portfolio-website.png",
+  portfolioWebsite,
   "Portfolio Website",
   `Il mio 1° progetto del Master :
   <br />
@@ -57,7 +59,7 @@ let projectCounter = new Project(
   2,
   "Progetto JavaScript Basic",
   "https://counter-of-stars.netlify.app/",
-  "/src/images/master-project/counter-of-stars.png",
+  counterOfStars,
   "Counter App",
   `Il 2° progetto del Master : <br>
     Un' applicazione che funziona da counter tramite l'interazione
@@ -70,7 +72,7 @@ let projectBooks = new Project(
   3,
   "Progetto JavaScript Advanced",
   "https://the-book-camp.netlify.app/",
-  "/src/images/master-project/the-book-camp-active.png",
+  theBookCamp,
   "The Book Camp",
   `Il 3° Progetto del Master : <br>
     Un'applicazione per incentivare la lettura di libri. <br>L'applicazione si collega, mediante una chiamata fetch, all'API del servizio esterno <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a>, grazie al quale l'utente può cercare una specifica categoria di libri e visualizzarne il titolo, l'autore, la copertina, e una descrizione (se provviste).`,
