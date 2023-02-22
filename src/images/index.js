@@ -6,8 +6,6 @@ export const jquery = require("./jquery.svg");
 export const wordpress = require("./wordpress.svg");
 export const git = require("./git.svg");*/
 
-import mockup from "./mockup-portfolio/mockup-cogesca.png";
-
 //* SKILL IMAGE
 
 import html from "./skills/html.svg";
@@ -20,5 +18,21 @@ import wordpress from "./skills/wordpress.svg";
 import vite from "./skills/vite.svg";
 
 export { html, css, js, sass, jquery, git, wordpress, vite };
+
+//* MASTER PROJECT
+import counterOfStars from "./master-project/counter-of-stars.png";
+import portfolioWebsite from "./master-project/portfolio-website.png";
+import theBookCamp from "./master-project/the-book-camp-active.png";
+
+export { counterOfStars, portfolioWebsite, theBookCamp };
+
+//* MOCKUP PORTFOLIO
+import mockupCogesca from "./mockup-portfolio/mockup-cogesca.png";
+import mockupMtp from "./mockup-portfolio/mockup-mtp.png";
+import mockupOdontoiatria from "./mockup-portfolio/mockup-odontoiatria.png";
+import mockupSeteco from "./mockup-portfolio/mockup-seteco.png";
+import mockupAura from "./mockup-portfolio/mockup-studio-aura.png";
+
+export { mockupCogesca, mockupMtp, mockupOdontoiatria, mockupSeteco, mockupAura };
 
 //? È possibile creare una funzione per automatizzare l'import / export delle immagini nella cartella
