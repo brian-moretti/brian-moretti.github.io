@@ -28,7 +28,7 @@ html {
 menu {
   position: fixed;
   background-color: $color-one;
-  height: 100vh;
+  max-height: 100vh;
   overscroll-behavior: contain;
   top: 0;
   left: 0;

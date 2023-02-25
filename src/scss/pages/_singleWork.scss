@@ -18,11 +18,8 @@
 }
 .mobile {
   width: fit-content;
-  //margin: 0 auto;
+  margin: 0 auto;
   transform: translateY(-40px);
-}
-.sectionWork div {
-  //flex: 1;
 }
 
 .work-details {
@@ -216,6 +213,7 @@ a {
   .sectionWork {
     padding: 7em 4em;
     margin-left: 0;
+    height: fit-content;
   }
 
   .explained ul {
@@ -272,6 +270,10 @@ a {
 
   .imageBox img {
     width: 60vw;
+  }
+
+  .align{
+    text-align: center;
   }
 
   .listBenefit li {
