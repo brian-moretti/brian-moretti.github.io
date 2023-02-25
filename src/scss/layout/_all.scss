@@ -13,6 +13,7 @@
 @media only screen and (max-width: 1024px) {
   menu {
     display: none;
+    overflow-y: scroll;
   }
 
   #showMenu {
@@ -31,7 +32,7 @@
   }
 
   .section:first-of-type {
-    padding: 7em 4em;
+    padding: 7em 1em 7em 4em;
   }
 
   .top-tag {
@@ -163,17 +164,7 @@
   }
 }
 
-//! SPOSTATO LAYOUT A 1024 PX...VEDERE SE RIDIMENSIONARE ...
-//? LAYOUT INTERMEDIO PER PROGETTI...
-
 @media only screen and (max-width: 784px) {
-  /*   .section {
-    scroll-snap-align: none;
-    height: fit-content;
-  }
-  .section:first-of-type {
-    height: 100vh;
-  } */
   .showing {
     font-size: 2.3em;
   }
@@ -222,11 +213,11 @@
 
 @media only screen and (max-width: 671px) {
   .showing {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 
   .section:first-of-type {
-    padding: 9em 4em;
+    padding: 9em 1em 9em 4em;
   }
 
   #hideSkill {
@@ -238,7 +229,11 @@
 
 @media only screen and (max-width: 551px) {
   .showing {
-    font-size: 1.65em;
+    font-size: 1.4em;
+  }
+
+  .section:first-of-type {
+    padding: 9em 1em 9em 3em;
   }
 
   #hideSkill {
@@ -275,11 +270,11 @@
 
 @media only screen and (max-width: 426px) {
   .showing {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
 
   .section:first-of-type {
-    padding: 9em 0 6em 1.75em;
+    padding: 9em 0.5em 9em 1.75em;
   }
 
   .section {
@@ -332,13 +327,13 @@
 
 @media only screen and (max-width: 376px) {
   .showing {
-    font-size: 1.25em;
+    font-size: 1em;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .showing {
-    font-size: 1em;
+    font-size: .9em;
   }
 }
 

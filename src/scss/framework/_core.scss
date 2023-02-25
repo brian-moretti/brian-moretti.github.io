@@ -28,8 +28,8 @@ html {
 menu {
   position: fixed;
   background-color: $color-one;
-  min-height: 100vh;
-  // overflow-y: scroll; in layout _all
+  height: 100vh;
+  overscroll-behavior: contain;
   top: 0;
   left: 0;
   bottom: 0;
@@ -212,6 +212,10 @@ menu {
   background-color: $color-two;
 }
 
+.scroll-overflow{
+  overflow-y: scroll;
+  height: 100vh;
+}
 //* TOP & BOTTOM TAG HTML
 
 .top-tag {
