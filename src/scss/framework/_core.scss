@@ -21,12 +21,15 @@ html {
   font-family: $font-text;
 }
 
+
+
 //* MENU SIDEBAR + MENU BUTTON < 1024PX
 
 menu {
   position: fixed;
   background-color: $color-one;
   min-height: 100vh;
+  // overflow-y: scroll; in layout _all
   top: 0;
   left: 0;
   bottom: 0;
@@ -43,7 +46,7 @@ menu {
 
 #brand {
   text-align: center;
-  margin-top: 2em;
+  margin: 2em 0;
 }
 
 #brand a {
@@ -70,6 +73,7 @@ menu {
   display: inherit;
   flex-direction: inherit;
   border-top: 2px solid $color-two;
+  margin: 2em 0;
 }
 
 #navLink a {
@@ -96,6 +100,7 @@ menu {
   list-style-type: none;
   justify-content: center;
   align-items: stretch;
+  margin: 2em 0;
 }
 
 .social a {
@@ -276,9 +281,8 @@ menu {
 }
 .containerElements p {
   position: relative;
-  font-size: 1.1em;
+  font-size: 1.15em;
   line-height: 1.5em;
-  text-align: left;
   margin-bottom: 4em;
   color: $color-three;
 }
@@ -295,6 +299,31 @@ menu {
   left: -20px;
 }
 
+.containerElements p > a{
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+.containerElements p > span {
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.containerElements p > br{
+  display: block;
+  margin: 1em 0;
+  content: "";
+}
+
+.containerElements p > q{
+  font-style: italic;
+  font-family: $font-future;
+  font-size: 1em;
+  color: $color-one;
+}
+
 //* FRONT PAGE STYLE
 
 #frontPage h1 {
@@ -305,7 +334,7 @@ menu {
 #frontPage h1::before {
   @include htmlElement("<h1>", 0.8em);
   top: -12px;
-  left: -17px;
+  left: -10px;
 }
 
 #frontPage h1::after {
@@ -322,7 +351,11 @@ menu {
   opacity: 0;
 }
 
-.showing:nth-child(8) {
+.marginShowing{
+  margin-right: 20px;
+}
+
+/* .showing:nth-child(8) {
   margin-right: 20px;
 }
 
@@ -332,7 +365,7 @@ menu {
 
 .showing:nth-child(23) {
   margin-right: 20px;
-}
+} */
 
 //! CREARE ANIMAZIONE TITOLO PRINCIPALE ON HOVER
 
@@ -346,14 +379,14 @@ menu {
 
 #job::before {
   @include htmlElement("<p>", 1.2em);
-  top: 20px;
-  left: -17px;
+  top: 15px;
+  left: -10px;
 }
 
 #job::after {
   @include htmlElement("</p>", 1.2em);
   bottom: 15px;
-  left: -22px;
+  left: -15px;
 }
 
 //* CONTACT BUTTON - FRONT PAGE STYLE
@@ -476,7 +509,7 @@ menu {
 .box h3 {
   color: $color-one;
   font-size: 1.5em;
-  filter: drop-shadow(1.5px 1.5px $color-one);
+  filter: drop-shadow(1px 1px $color-three);
 }
 .box:hover h3 {
   color: $color-two;
@@ -495,6 +528,11 @@ menu {
   color: $color-two;
   transition: all 0.5s linear;
 }
+
+.box img{
+  filter: drop-shadow(0 0 0.75px $color-three);
+}
+
 .box:last-of-type:hover img {
   background-image: url("/src/images/project-hover.svg");
 }

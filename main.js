@@ -1,29 +1,24 @@
 import { circularAnimation } from "./src/js/skillAnimation";
 import { createSkill } from "./src/js/createElement";
 import { menu } from "./src/js/sidebarMenu";
-import { footer } from './src/js/copyright';
+import { footer } from "./src/js/copyright";
 //import { createProject, arrayProject } from "./src/js/projectPage"; //! TOLTO PER INCOMPATIBILITA'
 
 const loader = "< Let's build something together >";
 const loaderContainer = document.querySelector(".container");
 const text = document.querySelector(".textLoader");
-for(let letter of loader){
-  text.textContent += letter
+for (let letter of loader) {
+  text.textContent += letter;
 }
 
-const btnMenu = document.getElementById("showMenu")
+const btnMenu = document.getElementById("showMenu");
 let skillElement = document.querySelectorAll(".skill");
 
-
 window.addEventListener("DOMContentLoaded", () => {
-  btnMenu.style.visibility = "hidden"
-
-  //document.querySelector("#frontPage").style.opacity = 1;
-  //document.querySelector("#frontPage").style.transform = "translateX(0)";
-   text.addEventListener("animationend", () => {
+  btnMenu.style.visibility = "hidden";
+  text.addEventListener("animationend", () => {
     document.body.removeChild(loaderContainer);
-    btnMenu.style.visibility = "visible"
-
+    btnMenu.style.visibility = "visible";
     menu.style.transform = "translateY(0)";
 
     for (let i = 0; i < document.querySelectorAll(".showing").length; i++) {

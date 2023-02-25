@@ -32,7 +32,6 @@
 
   .section:first-of-type {
     padding: 7em 4em;
-    height: 100vh;
   }
 
   .top-tag {
@@ -179,16 +178,8 @@
     font-size: 2.3em;
   }
 
-  .showing:nth-child(8) {
-    margin-right: 10px;
-  }
-
-  .showing:nth-child(14) {
-    margin-right: 8px;
-  }
-
-  .showing:nth-child(23) {
-    margin-right: 10px;
+  .marginShowing{
+    margin-right: 8.5px;
   }
 
   #header ul {
@@ -284,26 +275,31 @@
 
 @media only screen and (max-width: 426px) {
   .showing {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 
   .section:first-of-type {
-    padding: 9em 2em 6em 2em;
+    padding: 9em 0 6em 1.75em;
   }
 
   .section {
     padding: 3em;
   }
-  .top-tag {
-    margin: 4em 0 0 5px;
-  }
-
-  .bottom-tag {
+  .top-tag, .bottom-tag {
     margin: 2em 0 0 5px;
+    font-size: 1em;
   }
 
-  #job{
-    font-size: .9em;
+  #frontPage h1::before, #frontPage h1::after{
+    font-size: 0.6em;
+  }
+
+  #job {
+    font-size: 0.75em;
+  }
+  
+  #job::after, #job::before{
+    font-size: 1em;
   }
 
   #contact-me {
@@ -336,13 +332,13 @@
 
 @media only screen and (max-width: 376px) {
   .showing {
-    font-size: 1em;
+    font-size: 1.25em;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .showing {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 

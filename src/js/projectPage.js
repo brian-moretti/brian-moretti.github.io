@@ -19,7 +19,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".showing")[i].style.transitionDelay =
       i * 0.1 + "s";
     document.querySelectorAll(".showing")[i].style.opacity = 1;
-    document.querySelectorAll(".showing")[i].style.marginRight = 0;
   }
 
   arrayProject.forEach((element) => {
@@ -75,7 +74,7 @@ let projectBooks = new Project(
   theBookCamp,
   "The Book Camp",
   `Il 3° Progetto del Master : <br>
-    Un'applicazione per incentivare la lettura di libri. <br>L'applicazione si collega, mediante una chiamata fetch, all'API del servizio esterno <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a>, grazie al quale l'utente può cercare una specifica categoria di libri e visualizzarne il titolo, l'autore, la copertina, e una descrizione (se provviste).`,
+   <em>Un'applicazione per incentivare la lettura di libri.</em> <br>L'applicazione si collega, mediante una chiamata fetch, all'API del servizio esterno <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a>, grazie al quale l'utente può cercare una specifica categoria di libri e visualizzarne il titolo, l'autore, la copertina, e una descrizione (se provviste).`,
   ["HTML", "CSS", "JAVASCRIPT"],
   "https://github.com/brian-moretti/JavaScript-Advanced-Project"
 );

@@ -181,6 +181,12 @@
   flex: 1;
 }
 
+.project-information br{
+  display: block;
+  content: "";
+  margin: .5em;
+}
+
 .single-project:nth-child(odd) .project-information {
   transform: translateX(-25px);
 }

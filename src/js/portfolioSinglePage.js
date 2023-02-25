@@ -13,7 +13,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".showing")[i].style.transitionDelay =
       i * 0.1 + "s";
     document.querySelectorAll(".showing")[i].style.opacity = 1;
-    document.querySelectorAll(".showing")[i].style.marginRight = 0;
   }
 });
 
