@@ -5,7 +5,7 @@ import footer from "./mockup/footer-image.png";
 import about from "./mockup/about-image.png";
 import service from "./mockup/service-image.png";
 import service2 from "./mockup/service-image2.png";
-import service3 from "./mockup/service-image3.png";
+import mobile from "./mockup/mobile-image.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Mtp);
@@ -63,7 +63,7 @@ let Mtp = new Work(
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.
-  <div><img alt="responsive image"></div>
+  <div class="image-example"><img src="${mobile}" alt="responsive image"></div>
   `,
   `<strong>Tutte le pagine del sito sono ottimizzate per la SEO-on-site:</strong> <br/>
   <ul>

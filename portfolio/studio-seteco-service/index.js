@@ -5,6 +5,8 @@ import footer from "./mockup/footer-image.png";
 import service from "./mockup/service-image.png";
 import service2 from "./mockup/service-image2.png";
 import quality from "./mockup/quality-image.png";
+import mobile from "./mockup/mobile-image.png";
+
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Seteco);
@@ -65,7 +67,7 @@ let Seteco = new Work(
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure. <br> In versione mobile ho aggiunto un pulsante fisso, in basso a destra, grazie al quale l'utente può inviare, tramite whatsApp, un messaggio diretto allo Studio per chiedere informazioni.
-  <div><img alt="responsive image"></div>
+  <div class="image-example"><img src="${mobile}" alt="responsive image"></div>
   `,
   `<strong>Tutte le pagine del sito sono ottimizzate per la SEO-on-site:</strong> <br/>
   <ul>

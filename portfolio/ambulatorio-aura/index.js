@@ -8,6 +8,7 @@ import service from "./mockup/service-image.png";
 import convention from "./mockup/convention-image.png";
 import therapy from "./mockup/therapy-image.png";
 import therapy2 from "./mockup/therapy-image2.png";
+import mobile from "./mockup/mobile-image.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Aura);
@@ -75,7 +76,7 @@ let Aura = new Work(
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.
-  <div><img alt="responsive image"></div>
+  <div class="image-example"><img src="${mobile}" alt="responsive image"></div>
   `,
   `<strong>Tutte le pagine del sito sono ottimizzate per la SEO-on-site:</strong> <br/>
   <ul>

@@ -56,7 +56,8 @@
 }
 
 .work-screen {
-  border-radius: 6px;
+  border-radius: 8px;
+  padding: 0.75em 0;
   flex: 1;
   transition: all 0.85s linear;
   background-color: rgba($color: $color-one, $alpha: 0.5);
@@ -72,9 +73,9 @@
   width: 60%;
   right: 0;
   flex: 1;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 2em 1em;
-  gap: 1em; 
+  gap: 1em;
   text-align: center;
   display: flex;
   flex-direction: column;

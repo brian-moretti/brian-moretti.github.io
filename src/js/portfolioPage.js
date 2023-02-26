@@ -6,6 +6,7 @@ import {
   odontoiatria,
   seteco,
   aura,
+  tassi,
 } from "../images/mockup-portfolio/mockup-portfolio";
 import { footer } from "./copyright";
 
@@ -59,7 +60,7 @@ let cogescaAppalti = new Portfolio(
 let studioTassi = new Portfolio(
   "Studio Tassi",
   "/portfolio/studio-tassi/",
-  "/",
+  tassi,
   ["Mobile Responsive", "Sito Web One-Page", "Showroom Progetti"]
 );
 let mptAmbulatorio = new Portfolio(
