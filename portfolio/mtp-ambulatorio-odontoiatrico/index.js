@@ -1,4 +1,11 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import contact from "./mockup/contact-image.png";
+import footer from "./mockup/footer-image.png";
+import about from "./mockup/about-image.png";
+import service from "./mockup/service-image.png";
+import service2 from "./mockup/service-image2.png";
+import service3 from "./mockup/service-image3.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Mtp);
@@ -12,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 let Mtp = new Work(
   ["Dettagli", "Il mio Lavoro", "Obiettivi", "Design", "Responsive", "Seo"],
-  `<strong>MTP</strong> è un Ambulatorio Odontoiatrico e Medicina Generala che opera sul territorio dei Castelli Romani. Offre servizi di diagnosi, prevenzione e cura della salute dentale, per adulti e bambini.<span><strong>Visita il sito</strong></span> <a href="https://mtpambulatorioodontoiatrico.it/" target="_blank">https://mtpambulatorioodontoiatrico.it/</a>`,
+  `<strong>MTP</strong> è un Ambulatorio Odontoiatrico e Medicina Generale che opera sul territorio dei Castelli Romani. Offre servizi di diagnosi, prevenzione e cura della salute dentale, per adulti e bambini.<span><strong>Visita il sito</strong></span> <a href="https://mtpambulatorioodontoiatrico.it/" target="_blank">https://mtpambulatorioodontoiatrico.it/</a>`,
   `<ul>
   <li>Progettazione e realizzazione del Design, studio della User Experience, del percorso di navigazione utente e gestione dell'architettura delle informazioni</li>
   <li>Realizzazione del Sito Web sul CMS Wordpress</li>
@@ -30,27 +37,29 @@ let Mtp = new Work(
   La sezione "Header" include tutte le principali informazioni dell'azienda: logo, indirizzo, numero di telefono, contatto email. Ciascun elemento è cliccabile e rimanda al contatto scelto agevolando e migliorando l'esperienza utente.
   <br>
   Il menu di navigazione è composto da tutte le pagine principali del Sito Web. Ciascuna conduce alla pagina di riferimento e, al passaggio del mouse, ogni link ha un'animazione <em>hover</em>. Quando ci si trova su una specifica pagina, il link nel menu assume un colore in accordo con la <em>Brand Identity</em>.
-  <br> Il pulsante "Prenota una visita" permette al'utente di spostarsi sulla piattaforma <em>"Ilmiodottore.it"</em> dove poter fissare una prima visita con lo Studio.
-  <div><img alt="header image"></div>
+  <br> Il pulsante "Prenota una visita" permette all'utente di spostarsi sulla piattaforma <em>"Ilmiodottore.it"</em> dove poter fissare una prima visita con lo Studio.
   <h3>Hero Section</h3>
   La prima sezione visibile all'utente che atterra sul sito è molto semplice e richiama i colori del brand.
   <br>
   L'immagine in copertina è fissata sullo schermo e si muove in relazione allo scroll del mouse
   <br>
   La CTA spinge l'utente visitatore a visitare il Sito per dare un'occhiata ai servizi, alle convenzioni e all'ambulatorio stesso oppure a fissare un appuntamento.
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dell'Ambulatorio, gli orari di apertura e il copyright.
-  <div><img alt="footer image"></div>
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
   <h2>Chi siamo</h2>
   La pagina "Chi siamo" mostra la storia dell'Ambulatorio e alcune immagini degli interni, delle sale e dei macchinari.
-  <div><img alt="inside image"></div>
+  <div class="image-example"><img src="${about}" alt="about image"></div>
   <h2>Terapie</h2>
   La pagina "Terapie" mostra tutte le terapie dentistiche e i trattamenti, con una piccola descrizione informativa, che è possibile eseguire presso l'Ambulatorio. <br>
-  <div><img alt="services image"></div>
+  <div class="image-example">
+  <div><img src="${service}" alt="service image"></div>
+  <div><img src="${service2}" alt="service image"></div>
+  </div>
   <h3>Contatti</h3>
   La pagina "Contatti" contiene tutte le informazioni per contattare l'Ambulatorio insieme ad un form di contatto. Vi ho incluso anche una mappa Google, grazie alla quale l'utente può verificare l'esatta ubicazione ed ottenerne le indicazioni stradali. <br>
-  <div><img alt="contact image"></div>
+  <div class="image-example"><img src="${contact}" alt="contact image"></div>
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.

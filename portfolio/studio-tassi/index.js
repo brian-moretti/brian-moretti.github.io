@@ -1,4 +1,9 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import footer from "./mockup/footer-image.png";
+import service from "./mockup/service-image.png";
+import projectIn from "./mockup/project-in-image.png";
+import projectOut from "./mockup/project-out-image.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Tassi);
@@ -29,29 +34,36 @@ let Tassi = new Work(
   La sezione "Header" include il logo e il menu di navigazione.
   <br>
   Il menu di navigazione è composto da tutte le pagine principali del Sito Web. Ciascuna conduce alla pagina di riferimento e al passaggio del mouse ogni link ha un'animazione <em>hover</em>.
-  <div><img alt="header image"></div>
   <h3>Hero Section</h3>
   La prima sezione visibile all'utente che atterra sul sito richiama i colori della <em>Brand Identity</em>, ed è composta da una "slideshow" di 3 immagini che cambiano ad un intervallo regolare di 5 secondi. Una scritta di un celebre architetto compare insieme alla prima immagine per poi sparire dopo 5 secondi e ricomparire quando ricomincia il ciclo.
   <br>
   Questa celebre frase rappresenta il <strong><em>valore</em></strong> e <strong><em>l'obiettivo ultimo</em></strong> dello Studio Tassi. 
   <br>
   La Home Page è composta da alcune sezioni informative sugli ambiti in cui lo Studio Tassi opera, i servizi offerti e infine un carosello di immagini di alcuni dei loro lavori. In fondo sono presenti 2 pulsanti che permettono all'utente di spostarsi direttamente sulla pagine dei progetti realizzati. 
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dello Studio e il copyright. Ciascun elemento è cliccabile e rimanda al contatto scelto agevolando e migliorando l'esperienza utente.
-  <div><img alt="footer image"></div>
-  <h3>L'Ambulatorio</h3>
-  La pagina "Chi siamo"
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
   <h3>Servizi</h3>
   La pagina "Servizi" mostra un lista ben approfondita di tutti gli ambiti di competenza e operatività, suddivisi per macro-aree.
-  <div><img alt="services image"></div>
+  <div class="image-example"><img src="${service}" alt="service image"></div>
   <h3>Progetti</h3>
   La pagina "Progetti" si divide in 2 sotto-pagine, "Esterni" e "Interni". Ciascuna pagina mostra una selezione ben curata dei progetti che lo Studio Tassi ha realizzato. Vengono forniti i luoghi di intervento e alcune immagini del lavoro ultimato.
-  <div><img alt="progect image"></div>
+  <div class="image-example">
+  <img src="${projectOut}" alt="service image">
+  <img src="${projectIn}" alt="service image">
+  </div>
+  `,
+
+  /*
+  ! DA INSERIRE APPENA POSSIBILE
+  <h3>L'Ambulatorio</h3>
+  La pagina "Chi siamo"
+
   <h3>Contatti</h3>
   La pagina "Contatti" contiene tutte le informazioni per contattare lo Studio Tassi, incluso un form di contatto. Vi ho incluso anche una mappa Google, grazie alla quale l'utente può verificare l'esatta ubicazione ed ottenerne le indicazioni stradali. <br>
   <div><img alt="contact image"></div>
-  `,
+/*/
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.
   <div><img alt="responsive image"></div>
@@ -63,7 +75,7 @@ let Tassi = new Work(
   <li>Google Search Console garantisce un monitoraggio costante delle performance SEO del sito e spedisce al web master un report mensile con le statistiche SEO ed eventuali errori da correggere;</li>
   <li>Il sistema di Cache e di Lazy Load delle immagini permette una caricamento più rapido delle pagine del sito.</li>
   </ul>`
-  
+
   /*
   ? ASSISTENZA `
   Con l'acquisto del sito web è incluso per un anno il servizio di manutenzione, assistenza e modifiche.

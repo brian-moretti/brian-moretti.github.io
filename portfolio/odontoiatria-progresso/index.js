@@ -1,4 +1,12 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import contact from "./mockup/contact-image.png";
+import footer from "./mockup/footer-image.png";
+import inside from "./mockup/inside-image.png";
+import service from "./mockup/service-image.png";
+import convention from "./mockup/convention-image.png";
+import quality from "./mockup/quality-image.png";
+import service2 from "./mockup/service-image2.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Odontoiatria);
@@ -30,29 +38,35 @@ let Odontoiatria = new Work(
   La sezione "Header" include tutte le principali informazioni dell'azienda: logo, indirizzo, numero di telefono, link ai profili social (Scheda Google Business, Facebook, Instagram) e il menu di navigazione. Ciascun elemento è cliccabile, con animazione <em>hover</em> e rimanda al contatto/profilo scelto agevolando e migliorando l'esperienza utente.
   <br>
   Il menu di navigazione è composto da tutte le pagine principali del Sito Web. Ciascuna conduce alla pagina di riferimento e al passaggio del mouse ogni link ha un'animazione <em>hover</em>. Quando ci si trova su una specifica pagina, il link nel menu assume un colore in accordo con la <em>Brand Identity</em>. Il pulsante "Prendi un appuntamento", se cliccato, conduce l'utente a fine pagina dove sono presenti tutte le modalità per contattare l'Ambulatorio e un form contatti.
-  <div><img alt="header image"></div>
   <h3>Hero Section</h3>
   La prima sezione visibile all'utente che atterra sul sito richiama i colori della <em>Brand Identity</em>, ed è composta da una "slideshow" di 3 immagini che cambiano ad un intervallo regolare di 5 secondi.
   <br>
   La frase di benvenuto "Fai del tuo sorriso la curva più attraente del tuo corpo" spinge l'utente a visualizzare un messaggio metaforico di <em>prendersi cura della propria igiene dentale</em> <br>
   La CTA spinge l'utente visitatore a visitare il sito web oppure a contattre direttamente l'Ambulatorio.
   <br>
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dell'Ambulatorio, i link ai canali social e il copyright. Ciascun elemento è cliccabile e rimanda al contatto/profilo scelto agevolando e migliorando l'esperienza utente.
-  <div><img alt="footer image"></div>
-  <h2>L'Ambulatorio</h2>
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
+  <h3>L'Ambulatorio</h3>
   La pagina "Ambulatorio" contiene una serie di caroselli "slideshow" che mostrano l'interno dell'Ambulatorio, le sale e i macchinari.
+  <div class="image-example">
+  <img src="${inside}" alt="inside image">
+  <img src="${quality}" alt="inside image">
+  </div>
   <h2>Terapie</h2>
   La pagina "Terapia" mostra tutte le terapie dentistiche e i trattamenti, con una piccola descrizione informativa, che è possibile eseguire presso l'Ambulatorio. <br>
   Particolare cura abbiamo dedicato alla pagina "Igiene Dentale". All'interno vengono fornite informazioni esaustive su cosa sia l'igiene dentale e su come questa venga eseguita. Per concludere abbiamo dato importanza ad un macchinario di ultima generazione che l'Ambulatorio utilizza proprio per eseguire questa terapia.
-  <div><img alt="services image"></div>
+  <div class="image-example">
+  <img src="${service}" alt="service image">
+  <img src="${service2}" alt="service image">
+  </div>
   <h3>Convenzioni</h3>
   La pagina "Convenzioni" mostra all'utente tutte le agevolazioni, in merito ai pagamenti e/o finanziamenti, da cui può trarre beneficio. Mostra tutti gli enti convenzionati e le modalità di pagamento.
-  <div><img alt="convention image"></div>
+  <div class="image-example"><img src="${convention}" alt="convention image"></div>
   <h3>Contatti</h3>
   La pagina "Contatti" contiene tutte le informazioni per contattare l'Ambulatorio, incluso un form di contatto. È presente un doppio bottone con animazione <em>hover</em> che permette all'utente di chiamare l'Ambulatorio oppure di inviare una email. Vi ho incluso anche una mappa Google, grazie alla quale l'utente può verificare l'esatta ubicazione ed ottenerne le indicazioni stradali. <br>
-  <div><img alt="contact image"></div>
+  <div class="image-example"><img src="${contact}" alt="contact image"></div>
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.
@@ -64,7 +78,7 @@ let Odontoiatria = new Work(
   <li>Il Tag Title delle pagine e le Meta-Descrizioni curate garantiscono degli snippet completi nella pagina dei risultati dei motori di ricerca (sia da mobile che da desktop);</li>
   <li>Google Search Console garantisce un monitoraggio costante delle performance SEO del sito e spedisce al web master un report mensile con le statistiche SEO ed eventuali errori da correggere;</li>
   </ul>`
-  
+
   /*
   ? ASSISTENZA `
   Con l'acquisto del sito web è incluso per un anno il servizio di manutenzione, assistenza e modifiche.

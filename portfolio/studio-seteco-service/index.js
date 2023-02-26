@@ -1,4 +1,10 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import contact from "./mockup/contact-image.png";
+import footer from "./mockup/footer-image.png";
+import service from "./mockup/service-image.png";
+import service2 from "./mockup/service-image2.png";
+import quality from "./mockup/quality-image.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Seteco);
@@ -30,30 +36,32 @@ let Seteco = new Work(
   La sezione "Header" include tutte le principali informazioni dell'azienda: logo, indirizzo, numeri di telefono e contatti email. Ciascun elemento è cliccabile e rimanda al contatto scelto agevolando e migliorando l'esperienza utente.
   <br>
   Il pulsante "CONTATTACI" apre un popup che permette all'utente di compilare, senza impegno, un modulo per contattare direttamente lo Studio ed indicare le proprie necessità.
-  <div><img alt="header image"></div>
   <h3>Hero Section</h3>
   La prima sezione visibile al navigatore che atterra sul sito è molto semplice e richiama i colori del brand.
   <br>
   Il testo di presentazione, dinamico ad intervalli regolari di 5 secondi, mette subito in risalto quali sono i punti di forza e di cosa si occupa lo Studio, permettendo immediatamente all'utente visitatore di capire se questo sito può aiutarlo a risolvere il suo problema.
   <br>
   La CTA spinge l'utente visitatore a visitare la pagina dei servizi.
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dell'azienda, il copyright e il numero d'iscrizione alla Camera di Commercio di Roma. Ciascun elemento è cliccabile e rimanda al contatto scelto agevolando e migliorando l'esperienza utente.
   <br>
   In aggiunta è presente un pulsante "Prenota una consulenza" che apre una pagina contenente un modulo specifico per fissare un appuntamento con i Dottori Commercialisti indicando su quale materia/argomento debba essere incentrato.
-  <div><img alt="footer image"></div>
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
   <h3>Servizi</h3>
   La sezione "Servizi" include tutte le macro-aree in cui lo Studio è specializzato, inclusi gli ambiti di competenza e operatività.
-  <div><img alt="services image"></div>
+  <div class="image-example">
+  <img src="${service}" alt="service image">
+  <img src="${service2}" alt="service image">
+  </div>
   <h3>Punti di Forza</h3>
   In questa sezione ho voluto porre l'attenzione su alcuni elementi chiave dello Studio, ovvero la lunga attività sul territorio, la professionalità e competenza dei Dottori Commercialisti e il loro modo di lavorare, semplice e chiaro <br>
   Ho realizzato la sezione con un design a "fisarmonica", in cui ciascun elemento viene aperto o chiuso singolarmente premendo i pulsanti laterali (+ | -).
   Il tutto arricchito da un'immagine e un icona, che si muove allo scroll del mouse, raffiguranti degli scacchi per visualizzare un messaggio metaforico di <strong><em>"fai la mossa giusta"</em></strong>
-  <div><img alt="quality point image"></div>
+  <div class="image-example"><img src="${quality}" alt="quality point image"></div>
   <h3>Contatti</h3>
   La sezione "Contatti" pone l'attenzione su tutte le modalità per contattare lo Studio. Vi ho incluso anche una mappa Google, grazie alla quale l'utente può verificare l'esatta ubicazione ed ottenerne le indicazioni stradali.
-  <div><img alt="contact image"></div>
+  <div class="image-example"><img src="${contact}" alt="contact image"></div>
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure. <br> In versione mobile ho aggiunto un pulsante fisso, in basso a destra, grazie al quale l'utente può inviare, tramite whatsApp, un messaggio diretto allo Studio per chiedere informazioni.

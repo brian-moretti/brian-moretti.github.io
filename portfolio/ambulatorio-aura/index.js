@@ -1,4 +1,13 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import contact from "./mockup/contact-image.png";
+import footer from "./mockup/footer-image.png";
+import inside from "./mockup/inside-image.png";
+import review from "./mockup/review-image.png";
+import service from "./mockup/service-image.png";
+import convention from "./mockup/convention-image.png";
+import therapy from "./mockup/therapy-image.png";
+import therapy2 from "./mockup/therapy-image2.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Aura);
@@ -30,35 +39,39 @@ let Aura = new Work(
   La sezione "Header" include tutte le principali informazioni dell'azienda: logo, indirizzo, numero di telefono, contatto email e link ai profili social (Scheda Google Business, Facebook, Instagram). Ciascun elemento è cliccabile, con animazione <em>hover</em> e rimanda al contatto/profilo scelto agevolando e migliorando l'esperienza utente.
   <br>
   Il menu di navigazione è composto da tutte le pagine principali del Sito Web. Ciascuna conduce alla pagina di riferimento e al passaggio del mouse ogni link ha un'animazione <em>hover</em>. 
-  <div><img alt="header image"></div>
   <h3>Hero Section</h3>
   La prima sezione visibile all'utente che atterra sul sito è molto semplice e richiama i colori del brand.
   <br>
   Il testo di presentazione è un semplice "benvenuto" con un messaggio chiaro e diretto, ovvero l'apertura dell'Ambulatorio anche di Sabato, di modo tale che l'utente ne sia, fin da subito, a conoscenza ed, eventualmente, fissare degli appuntamenti anche in quel giorno. Di lato, o sotto nella versione Mobile, ho inserito alcune foto degli interni e, soprattutto, degli esterni, così che l'utente possa avere un'idea più chiara e precisa della sua ubicazione.
   <br>
   La CTA spinge l'utente visitatore a visitare il Sito per dare un'occhiata ai servizi, alle convenzioni e all'ambulatorio stesso.
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dell'Ambulatorio, gli orari di apertura, i link ai canali social e il copyright. Ciascun elemento è cliccabile e rimanda al contatto/profilo scelto agevolando e migliorando l'esperienza utente.
-  <div><img alt="footer image"></div>
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
   <h3>Recensioni</h3>
   All'interno del sito ci sono snippet con le recensioni dei clienti. Sono disposti in modo strategico in varie pagine (home, contatti). Questo serve per dare <em>riprova sociale</em>, condizione che aiuta ad accorciare il percorso decisionale d'acquisto dell'utente visitatore.
-  <div><img alt="review image"></div>
+  <div class="image-example"><img src="${review}" alt="review image"></div>
   <h2>L'Ambulatorio</h2>
   La pagina "Ambulatorio" contiene una serie di caroselli "slideshow" che mostrano l'interno dell'Ambulatorio, le sale e i macchinari.
+  <div class="image-example"><img src="${inside}" alt="inside image"></div>
   <h3>Direttore Sanitario</h3>
   Nello stesso menu a tendina, la pagina del "Direttore Sanitario" mostra chi egli sia, arricchita da un'immagine, una piccola descrizione e i principali titoli e attestati ottenuti nel corso della sua carriera.
-  <h2>Terapia e Diagnostica</h2>
+  <h3>Terapia e Diagnostica</h3>
   La pagina "Terapia" mostra tutte le terapie dentistiche e i trattamenti, con una piccola descrizione informativa, che è possibile eseguire presso l'Ambulatorio. <br>
   La pagina "Diagnostica" mostra i macchinari di ultima generazione di cui l'Ambulatorio si serve per eseguire scansioni e radiografie. All'interno è presente anche una piccola sezione che mostra i vantaggi nell'utilizzo di questi macchinari ed una "FAQ" a fisarmonica dove si risponde alle domande più comuni che i clienti si pongono.
-  <div><img alt="services image"></div>
+  <div class="image-example">
+  <img src="${service}" alt="service image">
+  <img src="${therapy}" alt="service image">
+  <img src="${therapy2}" alt="service image">
+  </div>
   <h3>Convenzioni</h3>
   La pagina "Convenzioni" mostra all'utente tutte le agevolazioni, in merito ai pagamenti e/o finanziamenti, da cui può trarre beneficio. Mostra tutti gli enti convenzionati e le modalità di pagamento.
-  <div><img alt="convention image"></div>
+  <div class="image-example"><img src="${convention}" alt="convention image"></div>
   <h3>Contatti</h3>
   La pagina "Contatti" contiene tutte le informazioni per contattare l'Ambulatorio. Vi ho incluso anche una mappa Google, grazie alla quale l'utente può verificare l'esatta ubicazione ed ottenerne le indicazioni stradali. <br>
   È presente anche un modulo per conttare l'Ambulatorio e compare come popup dopo aver premuto il relativo pulsante.
-  <div><img alt="contact image"></div>
+  <div class="image-example"><img src="${contact}" alt="contact image"></div>
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.

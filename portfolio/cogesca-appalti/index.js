@@ -1,4 +1,8 @@
 import { createDetails, Work, divArr } from "../../src/js/portfolioSinglePage";
+import hero from "./mockup/hero-image.png";
+import contact from "./mockup/contact-image.png";
+import footer from "./mockup/footer-image.png";
+import service from "./mockup/service-image.png";
 
 window.addEventListener("DOMContentLoaded", () => {
   createDetails(Cogesca);
@@ -27,21 +31,20 @@ let Cogesca = new Work(
   La User Experience è sviluppata su un sito mono-pagina. L'obiettivo principale del sito è quello di mostrare i servizi all'utente visitatore.
   <h3>Header</h3>
   La sezione "Header" include il logo dell'impresa e un pulsante "Contattaci", con animazione <em>hover</em>, che conduce alle informazioni di contatto a fine pagina.
-  <div><img alt="header image"></div>
   <h3>Hero Section</h3>
   La prima sezione visibile all'utente che atterra sul sito è molto semplice e richiama i colori del brand.
   <br>
   Il testo di benvenuto è una semplice, ma chiara e incisiva frase che mette subito in primo piano il binomio opposto <strong><em>Scavo/Demolizione - Costruzione/Creazione</em></strong></strong>
-  <div><img alt="hero image"></div>
+  <div class="image-example"><img src="${hero}" alt="header image"></div>
   <h3>Footer</h3>
   Il "Footer" include il logo, tutte le informazioni di contatto dell'impresa e il copyright. Ciascun elemento è cliccabile e rimanda al contatto scelto agevolando e migliorando l'esperienza utente.
-  <div><img alt="footer image"></div>
+  <div class="image-example"><img src="${footer}" alt="footer image"></div>
   <h3>Servizi</h3>
   La sezione "Servizi" include le aree di competenze in cui l'impresa è specializzata, fornendo ulteriori dettagli sui servizi stessi.
-  <div><img alt="services image"></div>
+  <div class="image-example"><img src="${service}" alt="service image"></div>
   <h3>Contatti</h3>
   La sezione "Contatti" presenta 3 diverse modalità per contattare l'impresa: contatto telefonico, contatto email e contatto attraverso la compilazione di un modulo. Il modulo, una volta cliccato il pulsante, è un popup che compare a tutto schermo, che permette all'utente di inviare un messaggio ed essere ricontattato.
-  <div><img alt="contact image"></div>
+  <div class="image-example"><img src="${contact}" alt="contact image"></div>
   `,
 
   `Il sito web ha un Design Responsive: significa che la sua struttura si adatta alla visita da dispositivi mobili come smartphone e tablet di tutte le misure.
