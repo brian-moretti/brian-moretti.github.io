@@ -1,23 +1,23 @@
-import { circularAnimation } from "./src/js/skillAnimation";
+//import { circularAnimation } from "./src/js/skillAnimation";
 import { createSkill } from "./src/js/createElement";
 import { menu } from "./src/js/sidebarMenu";
 import { footer } from "./src/js/copyright";
 //import { createProject, arrayProject } from "./src/js/projectPage"; //! TOLTO PER INCOMPATIBILITA'
 
-const loader = "< Let's build something together >";
+/* const loader = "< Let's build something together >";
 const loaderContainer = document.querySelector(".container");
 const text = document.querySelector(".textLoader");
 for (let letter of loader) {
   text.textContent += letter;
 }
-
+ */
 const btnMenu = document.getElementById("showMenu");
-let skillElement = document.querySelectorAll(".skill");
+//let skillElement = document.querySelectorAll(".skill");
 
 window.addEventListener("DOMContentLoaded", () => {
   btnMenu.style.visibility = "hidden";
-  text.addEventListener("animationend", () => {
-    document.body.removeChild(loaderContainer);
+  //text.addEventListener("animationend", () => {
+   // document.body.removeChild(loaderContainer);
     btnMenu.style.visibility = "visible";
     menu.style.transform = "translateY(0)";
 
@@ -26,11 +26,12 @@ window.addEventListener("DOMContentLoaded", () => {
         i * 0.1 + "s";
       document.querySelectorAll(".showing")[i].style.opacity = 1;
     }
-  });
+  //});
 
   createSkill();
-  circularAnimation(skillElement);
+ // circularAnimation(skillElement);
 });
+
 
 /*arrayProject.forEach((element) => {
   createProject(element);

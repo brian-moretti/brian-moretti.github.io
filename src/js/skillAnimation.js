@@ -1,4 +1,4 @@
-function circularAnimation() {
+/* function circularAnimation() {
   let skillElement = document.querySelectorAll(".skill");
 
   for (let i = 0; i < skillElement.length; i++) {
@@ -9,4 +9,4 @@ function circularAnimation() {
   }
 }
 
-export { circularAnimation };
+export { circularAnimation }; */

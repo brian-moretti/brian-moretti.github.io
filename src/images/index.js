@@ -15,9 +15,9 @@ import sass from "./skills/sass.svg";
 import jquery from "./skills/jquery.svg";
 import git from "./skills/git.svg";
 import wordpress from "./skills/wordpress.svg";
-import vite from "./skills/vite.svg";
+import vitejs from "./skills/vitejs.svg";
 
-export { html, css, js, sass, jquery, git, wordpress, vite };
+export { html, css, js, sass, jquery, git, wordpress, vitejs };
 
 /*
 //* MASTER PROJECT

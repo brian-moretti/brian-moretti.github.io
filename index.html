@@ -9,16 +9,16 @@
       href="/src/images/favicon.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="/src/scss/style.scss" />
+    <link rel="stylesheet" type="text/css" href="/src/css/style.css" />
     <script
       src="https://kit.fontawesome.com/d2cc7bd70b.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <div class="container">
+    <!--   <div class="container">
       <span class="textLoader"></span>
-    </div>
+    </div> -->
 
     <!-- <div id="loader" class="wrapper">
       <div class="loader"></div>
@@ -28,10 +28,11 @@
     </div> -->
 
     <header>
+      
       <menu id="header" class="">
         <div id="brand">
-          <a href="../" rel="noopener noreferrer"
-            ><img
+          <a href="../" rel="noopener noreferrer">
+            <img
               src="/src/images/logo.png"
               alt="Brian Moretti Logo - PC Coding"
               width="120px"
@@ -43,6 +44,7 @@
         <nav id="navLink">
           <a href="#myself">Su di me</a>
           <a href="#worksProject">Progetti</a>
+          <a href="#worksProject">Portfolio</a>
           <a href="#contact">Contatti</a>
         </nav>
         <ul class="social">
@@ -55,7 +57,10 @@
             ></a>
           </li>
           <li>
-            <a href="" target="_blank" rel="noopener noreferrer"
+            <a
+              href="https://www.linkedin.com/in/brian-moretti/"
+              target="_blank"
+              rel="noopener noreferrer"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </li>
@@ -70,56 +75,60 @@
       <span class="arrow"></span>
     </button>
 
-    <div id="fullPage" class="scrolled">
-      <section id="frontPage" class="section">
-        <span class="top-tag">&lt;html&gt;</span><br />
-        <h1 id="title" class="title">
-          <span class="showing">C</span>
-          <span class="showing">i</span>
-          <span class="showing">a</span>
-          <span class="showing">o</span>
-          <span class="showing">,</span>
-          <br />
-          <span class="showing">M</span>
-          <span class="showing marginShowing">i</span>
-          <span class="showing">c</span>
-          <span class="showing">h</span>
-          <span class="showing">i</span>
-          <span class="showing">a</span>
-          <span class="showing">m</span>
-          <span class="showing marginShowing">o</span>
-          <span class="showing">B</span>
-          <span class="showing">r</span>
-          <span class="showing">i</span>
-          <span class="showing">a</span>
-          <span class="showing">n</span>
-          <br />
-          <span class="showing">W</span>
-          <span class="showing">e</span>
-          <span class="showing marginShowing">b</span>
-          <span class="showing">D</span>
-          <span class="showing">e</span>
-          <span class="showing">v</span>
-          <span class="showing">e</span>
-          <span class="showing">l</span>
-          <span class="showing">o</span>
-          <span class="showing">p</span>
-          <span class="showing">e</span>
-          <span class="showing">r</span>
-        </h1>
-        <p id="job">Front-End Developer | Sviluppatore Siti Web</p>
-        <div class="align">
-          <a href="#contact" class="link">
-            <span class="bg"></span>
-            <span class="text">Contattami</span></a
-          >
+    <section id="front-page" class="section">
+      <span class="top-tag">&lt;html&gt;</span><br />
+      <div class="container-page">
+        <div class="sub-container">
+      <h1>
+        <span class="showing">C</span>
+        <span class="showing">i</span>
+        <span class="showing">a</span>
+        <span class="showing">o</span>
+        <span class="showing">,</span>
+        <br />
+        <span class="showing">M</span>
+        <span class="showing marginShowing">i</span>
+        <span class="showing">c</span>
+        <span class="showing">h</span>
+        <span class="showing">i</span>
+        <span class="showing">a</span>
+        <span class="showing">m</span>
+        <span class="showing marginShowing">o</span>
+        <span class="showing">B</span>
+        <span class="showing">r</span>
+        <span class="showing">i</span>
+        <span class="showing">a</span>
+        <span class="showing">n</span>
+        <br />
+        <span class="showing">W</span>
+        <span class="showing">e</span>
+        <span class="showing marginShowing">b</span>
+        <span class="showing">D</span>
+        <span class="showing">e</span>
+        <span class="showing">v</span>
+        <span class="showing">e</span>
+        <span class="showing">l</span>
+        <span class="showing">o</span>
+        <span class="showing">p</span>
+        <span class="showing">e</span>
+        <span class="showing">r</span>
+      </h1>
+      <p id="job-title">Front-End Developer | Sviluppatore Siti Web</p>
+      <div>
+        <a href="#contact" class="contact-link">
+          <span class="bg"></span>
+          <span class="text">Contattami</span></a
+        >
+      </div>
         </div>
-      </section>
+      <div class="image-profile"> <img src="https://placehold.co/600x400" alt=""></div>
+    </div>
+    </section>
 
-      <section id="myself" class="section">
-        <div class="containerElements">
-          <h2 class="title">Su di me</h2>
-          <p class="textP">
+    <section id="myself" class="section">
+      <div class="containerElements">
+        <h2 class="title">Le mie competenze</h2>
+        <!--     <p class="textP">
             Sono uno sviluppatore web, lato front-end.
             <br />
             L'interesse e la passione nella creazione di Siti Web e nello
@@ -134,87 +143,100 @@
             soddisfazione nel creare un qualcosa, che prende vita da dei
             semplici codici! <br />
             <q>Progress, not Perfection</q> <br />
-          </p>
-        </div>
-        <div id="skillContainer">
-          <span id="hideSkill" class="overlay">SKILLS</span>
-        </div>
-      </section>
-      <section id="worksProject" class="section">
-        <div class="containerElements">
-          <h2 class="title">Portfolio</h2>
-          <p class="textP">
-            Qui puoi trovare una selezione di progetti, personali e non,
-            realizzati durante il mio percorso di studio.
-          </p>
-          <div id="works">
-            <div class="box">
-              <a href="/progetti-star2impact/" target="_blank">
-                <h3 class="title">Progetti</h3>
-                <span class="textP"
-                  >Progetti realizzati per il "Master Front-End"</span
-                >
-                <img src="/src/images/start2impact.svg" alt="" width="150px"
-              /></a>
-            </div>
-            <!-- <div class="box">
+          </p> -->
+      </div>
+      <div id="skill-container">
+        <!--           <span id="hideSkill" class="overlay">SKILLS</span>
+ -->
+      </div>
+    </section>
+
+<!--     <section id="worksProject" class="section">
+ --><!--       <div class="containerElements">
+ -->       
+ 
+ <section id="portfolio" class="section">
+   <div class="projects">
+     <h2 class="title">I miei Progetti</h2>
+     <p class="textP">
+             Qui puoi trovare una selezione di progetti, personali e non,
+             realizzati durante il mio percorso di studio.
+           </p>
+            <ul class="project-list"></ul>
+<!--           </div> --> 
+       </section>
+
+<!--         <div id="works"> -->
+        <!--   <div class="box">
+            <a href="/progetti-star2impact/" target="_blank">
+              <h3 class="title">Progetti</h3>
+              <span class="textP"
+                >Progetti realizzati per il "Master Front-End"</span
+              >
+              <img src="/src/images/start2impact.svg" alt="" width="150px"
+            /></a>
+          </div> -->
+          <!-- <div class="box">
               <h3>Projects</h3>
               <span>Progetti realizzati per il "Master Front-End"</span>
               <a href=""
                 ><img src="/images/start2impact.svg" alt="" width="150px"
               /></a>
             </div> -->
-            <div class="box">
-              <a href="/portfolio/" target="_blank">
-                <h3 class="title">Portfolio</h3>
-                <span class="textP"
-                  >Lavori realizzati per alcune aziende / attività locali</span
-                ><img src="/src/images/project-hover.svg" alt="" width="150px"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="contact" class="section">
-        <div class="containerElements">
-          <h2 class="title">Contattami</h2>
-          <p class="textP">
-            <span>Vuoi realizzare un Sito Web per la tua attività?</span>
-            <span>Hai bisogno di una vetrina per il tuo Business?</span>
-            <br />
-            Qualunque sia la ragione...non esitare a contattarmi, sono
-            interessato a qualsiasi opportunità, piccola o grande che sia!
-            <br />
-            Svilupperò un Sito Web personalizzato per te e per la tua attività!
-            <br />
-            Puoi contattarmi direttamente tramite il mio indirizzo email oppure
-            compilando, senza impegno, un modulo dove potrai, fin da subito,
-            fornirmi alcune indicazioni sul tipo di attività che hai e gli
-            obiettivi che vorresti raggiungere. <br />
-            <q>Non vedo l'ora di poter collaborare con te!</q>
-          </p>
-        </div>
+         <!--  <div class="box">
+            <a href="/portfolio/" target="_blank">
+              <h3 class="title">Portfolio</h3>
+              <span class="textP"
+                >Lavori realizzati per alcune aziende / attività locali</span
+              ><img src="/src/images/project-hover.svg" alt="" width="150px"
+            /></a>
+          </div> -->
+     <!--    </div>
+      </div> -->
+<!--     </section> -->
+    <section id="contact" class="section">
+<!--       <div class="containerElements"> -->
+  <div class="container-page">
+
+    <h2 class="title">Contattami</h2>
+    <p class="textP">
+      <span>Vuoi realizzare un Sito Web per la tua attività?</span>
+      <span>Hai bisogno di una vetrina per il tuo Business?</span>
+      <br />
+      Qualunque sia la ragione...non esitare a contattarmi, sono interessato
+      a qualsiasi opportunità, piccola o grande che sia!
+      <br />
+      Svilupperò un Sito Web personalizzato per te e per la tua attività!
+      <br />
+      Puoi contattarmi direttamente tramite il mio indirizzo email oppure
+      compilando, senza impegno, un modulo dove potrai, fin da subito,
+      fornirmi alcune indicazioni sul tipo di attività che hai e gli
+      obiettivi che vorresti raggiungere. <br />
+          <q>Non vedo l'ora di poter collaborare con te!</q>
+        </p>
+        <!--       </div> -->
         <div id="contactBtn">
-          <div class="contact">
-            <a href="https://tally.so/r/nprdkB" target="_blank">
-              <h5 class="title">Compila il modulo</h5>
-              <span><i class="fa-regular fa-keyboard"></i></span>
-            </a>
-          </div>
-          <div class="contact">
-            <a href="mailto:morettibrian.web@gmail.com">
-              <h5 class="title">Scrivimi</h5>
-              <span><i class="fa-solid fa-paper-plane"></i></span>
-            </a>
-          </div>
-          <span id="hideForm">&#64;</span>
+        <div class="contact">
+          <a href="https://tally.so/r/nprdkB" target="_blank">
+            <h5 class="title">Compila il modulo</h5>
+            <span><i class="fa-regular fa-keyboard"></i></span>
+          </a>
         </div>
-      </section>
-      <div id="bottom">
-        <span class="bottom-tag">&lt;/html&gt;</span>
+        <div class="contact">
+          <a href="mailto:morettibrian.web@gmail.com">
+            <h5 class="title">Scrivimi</h5>
+            <span><i class="fa-solid fa-paper-plane"></i></span>
+          </a>
+        </div>
+        <span id="hideForm">&#64;</span>
       </div>
     </div>
-
+      <!-- <div id="bottom"> -->
+        <span class="bottom-tag">&lt;/html&gt;</span>
+<!--       </div> -->
+    </section>
+    <!--     </div>  -->
     <script type="module" src="main.js"></script>
+    <script type="module" src="/src/js/projectPage.js"></script>
   </body>
 </html>
