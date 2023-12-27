@@ -6,29 +6,41 @@ $color-three: #f9f9f9;
 $color-html: #898989;
 
 @font-face {
-    font-family: "Allura";
-    src: url(/src/fonts/Allura-Regular.ttf);
-    font-weight: 100;
-  }
-  
-  @font-face {
-    font-family: "Didact";
-    src: url(/src/fonts/DidactGothic-Regular.ttf);
-  }
-  
-  @font-face {
-    font-family: "Open";
-    src: url(/src/fonts/OpenSans.ttf);
-    font-weight: 600;
-  }
-  
-  @font-face {
-    font-family: "Azonix";
-    src: url(/src/fonts/Azonix.otf);
-  }
+  font-family: "Allura";
+  src: url(/src/fonts/Allura-Regular.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Didact";
+  src: url(/src/fonts/DidactGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Open";
+  src: url(/src/fonts/OpenSans.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Azonix";
+  src: url(/src/fonts/Azonix.otf);
+}
+
+@font-face {
+  font-family: "Garet Book";
+  src: url(/src/fonts/Garet/Garet-Book.ttf);
+}
+
+@font-face {
+  font-family: "Nourd";
+  //! Capire font
+  src: url(/src/fonts/Nourd/nourd_light.ttf);
+}
 
 $font-future: "Azonix";
 $font-primary: "Open";
 $font-html: "Allura";
 $font-text: "Didact";
-
+$font-logo: "Garet Book";
+$font-test: "Nourd";

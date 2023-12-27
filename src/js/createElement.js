@@ -71,24 +71,40 @@ function createSkill() {
     //progress.setAttribute("data-type", skill[0].toUpperCase());
     //createTitle(element, skill[0]);
   }
-  test();
+  progressAnimation();
 }
 
-function test() {
+function progressAnimation() {
   let progressSkills = document.querySelectorAll(".skill-progress");
-  for (let progress of progressSkills) {
-    progress.setAttribute("value", 50);
-    progress.setAttribute("min", 1);
-    progress.setAttribute("max", 100);
-  }
   let value = 1;
-  let animation = setTimeout(function animate() {
-    value += 1;
-    // progress.value = value;
-  }, 100);
+  let animation;
+  document.querySelectorAll(".skill").forEach((element, index) => {
+    element.addEventListener("mouseenter", (e) => {
+      progressSkills[index].setAttribute("value", 1);
+      progressSkills[index].setAttribute("min", 1);
+      progressSkills[index].setAttribute("max", 100);
+      if (e.target.matches(".skill")) {
+        animation = setTimeout(function animate() {
+          value += 1;
+          progressSkills[index].value = value;
+          animation = setTimeout(animate, 5);
+          if (value >= progressSkills[index].max) {
+            value = 1;
+            clearTimeout(animation);
+          }
+        }, 5);
+      }
+    });
+    element.addEventListener("mouseleave", (e) => {
+      if (e.target.matches(".skill")) {
+        value = 1;
+        progressSkills[index].value = 1;
+        clearTimeout(animation);
+      }
+      return;
+    });
+  });
 }
-
-function animate() {}
 
 export {
   createSkill,

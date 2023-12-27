@@ -17,21 +17,20 @@ const btnMenu = document.getElementById("showMenu");
 window.addEventListener("DOMContentLoaded", () => {
   btnMenu.style.visibility = "hidden";
   //text.addEventListener("animationend", () => {
-   // document.body.removeChild(loaderContainer);
-    btnMenu.style.visibility = "visible";
-    menu.style.transform = "translateY(0)";
+  // document.body.removeChild(loaderContainer);
+  btnMenu.style.visibility = "visible";
+  menu.style.transform = "translateY(0)";
 
-    for (let i = 0; i < document.querySelectorAll(".showing").length; i++) {
-      document.querySelectorAll(".showing")[i].style.transitionDelay =
-        i * 0.1 + "s";
-      document.querySelectorAll(".showing")[i].style.opacity = 1;
-    }
+  for (let i = 0; i < document.querySelectorAll(".showing").length; i++) {
+    document.querySelectorAll(".showing")[i].style.transitionDelay =
+      i * 0.1 + "s";
+    document.querySelectorAll(".showing")[i].style.opacity = 1;
+  }
   //});
 
   createSkill();
- // circularAnimation(skillElement);
+  // circularAnimation(skillElement);
 });
-
 
 /*arrayProject.forEach((element) => {
   createProject(element);
@@ -83,3 +82,18 @@ setInterval(() => {
   circular(deg)
 }, 1);
 */
+
+// MOUSE CUSTOM
+
+/* const cursorPointed = document.querySelector('.point');
+
+const mouseCursor = (e) => {
+  const mouseX = e.clientX;
+  const mouseY = e.clientY;
+
+  cursorPointed.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+
+  console.log(mouseX + ":" + mouseY);
+};
+
+window.addEventListener("mousemove", mouseCursor); */

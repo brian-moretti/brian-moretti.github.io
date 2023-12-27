@@ -13,12 +13,32 @@
 
 html {
   background-color: $color-two;
+  scroll-behavior: smooth;
+}
+
+body{
+ // cursor: none;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   display: inline;
+}
+
+//MOUSE CUSTOM
+
+.point{
+  width: 10px;
+  height: 10px;
+  background-color: $color-one;
+  border-radius: 50%;
+  border: 1px solid red;
+  z-index: 10;
+}
+
+.round{
+
 }
 
 // MENU SIDEBAR
@@ -43,15 +63,17 @@ menu {
 }
 
 menu #brand {
+  border: 1px solid red;
   text-align: center;
   margin: 2em 0;
   & a > span {
-    color: $color-one;
-    background-color: $color-two;
+    color: $color-two;
+    //background-color: $color-two;
     display: block;
     padding: 0.2em 0;
     font-size: 1.3em;
-    font-family: $font-primary;
+    font-family: $font-test;
+    //font-weight: 600;
   }
 }
 
@@ -83,10 +105,11 @@ menu nav {
 
 menu .social {
   display: inherit;
-  //border: 1px solid red;
+  border: 1px solid red;
   justify-content: center;
   list-style-type: none;
   gap: 4px;
+  margin-bottom: 2rem;
   & a {
     color: $color-two;
     font-size: 1.4em;
@@ -201,6 +224,7 @@ menu #copyright {
     color: $color-three;
     opacity: 0;
   }
+
   .marginShowing {
     margin-right: 20px;
   }
@@ -298,13 +322,18 @@ menu #copyright {
 
   .skill {
     width: fit-content;
-    border: 2px solid red;
+    border: 2px solid $color-one;
     width: clamp(250px, 400px, 500px);
     padding: 1rem 5rem;
     filter: grayscale(1);
     display: flex;
     align-items: center;
     z-index: 1;
+    transform: skewX(-20deg);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 12px;
     //flex-direction: column;
     //gap: 1.5rem;
     //justify-content: center;
@@ -316,14 +345,16 @@ menu #copyright {
   }
 
   .skill img {
-    width: 100px;
+    width: 80px;
+    transform: skewX(20deg);
     //text-align: center;
   }
 
   .skill:hover {
     filter: grayscale(0);
     transition: all 0.5s ease-in-out;
-    box-shadow: 0 0 75px 5px $color-three inset;
+    box-shadow: 0 0 10px $color-one inset;
+    //background-color: #ada2a2;
     //border-radius: 50%;
     //padding: 0.5em;
   }
@@ -339,14 +370,14 @@ progress {
   height: 7.5px;
   //position: relative;
 }
-progress[value]::-webkit-progress-bar {
+progress::-webkit-progress-bar {
   background-color: #eee;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
   transform: skewX(-20deg);
   transform-origin: 0 100%;
 }
-progress[value]::-webkit-progress-value {
+progress::-webkit-progress-value {
   border-radius: 2px;
   background-color: $color-one;
   //background-size: 35px 20px, 100% 100%, 100% 100%;
@@ -477,7 +508,7 @@ progress[value]::-webkit-progress-value {
       //border: 1px solid red;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       gap: 2rem;
       min-height: 50vh;
       padding: 1em 1.5em;
@@ -538,7 +569,7 @@ progress[value]::-webkit-progress-value {
         background-color: rgba($color: #f9f9f9, $alpha: 0.85);
         //border: 2px solid $color-three;
         max-width: 500px;
-        min-height: 300px;
+        min-height: fit-content;
         //box-shadow: 0 0 6px 2px $color-three inset;
         border-radius: 8px;
         padding: 2rem 3rem;
@@ -560,31 +591,47 @@ progress[value]::-webkit-progress-value {
         list-style: none;
         display: flex;
         justify-content: flex-start;
+        width: fit-content;
         flex-wrap: wrap;
-        //border: 1px solid red;
+        gap: 1.5rem;
+        margin: 10px 0;
+        padding: 5px 13px;
+        border: 1.75px solid $color-two;
+        border-radius: 4px;
+        border-left: 6px solid $color-two;
+        border-right: 6px solid $color-two;
+        //background-color: $color-two;
       }
       .language {
         font-size: 1em;
         color: $color-html;
         font-family: $font-future;
         letter-spacing: 5px;
-        margin: 10px 20px;
+        //margin: 10px 20px;
       }
 
       .project-links {
         list-style: none;
         display: flex;
         justify-content: flex-end;
+        //width: fit-content;
+        margin: 0 10px;
+        gap: 10px;
       }
       .icon {
-        margin: 0 10px;
         font-size: 1.2em;
-
+        //border: 1px solid red;
+        border-radius: 50%;
+        background-color: $color-two;
+        transition: scale 0.5s ease-in-out;
+        &:hover {
+          scale: 1.1;
+        }
         & a {
           text-decoration: none;
           color: $color-one;
           display: block;
-          margin: 20px 10px;
+          margin: 10px;
           font-size: 1.2em;
         }
       }
@@ -612,6 +659,13 @@ progress[value]::-webkit-progress-value {
 // CONTACT PAGE - FORM + MODULE
 
 #contact {
+  .container-page {
+    display: flex;
+    //border: 1px solid red;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   h2 {
     font-size: 2.2em;
     margin-bottom: 1em;
@@ -628,4 +682,60 @@ progress[value]::-webkit-progress-value {
       bottom: -10px;
     }
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    //border: 1px solid red;
+    //width: clamp(250px, min() );
+    width: clamp(300px, 40vw, 40vw);
+    //gap: 1rem;
+
+    input,
+    textarea {
+      margin-bottom: 2rem;
+      border: none;
+      border-bottom: 2.5px solid $color-one;
+      background: none;
+      //background-color: rgba($color: $color-three, $alpha: 0.5);
+      color: $color-three;
+      padding: 5px 10px;
+      font-size: 1.2rem;
+      //word-break: break-word;
+      &:focus {
+        outline: 1px $color-two solid;
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 40rem $color-two inset;
+      -webkit-text-fill-color: $color-three;
+      caret-color: $color-three;
+    }
+
+    input[type="submit"] {
+      width: 65%;
+      margin: 2rem auto;
+      border: 2.5px solid $color-one;
+      padding: 1.2rem 0;
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 12px;
+      //transform: skewX(-20deg);
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        scale: 1.05;
+        background-color: $color-one;
+        color: $color-two;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+#hideForm {
+  @include hide;
 }

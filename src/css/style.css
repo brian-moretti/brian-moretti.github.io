@@ -16,6 +16,14 @@
   font-family: "Azonix";
   src: url(/src/fonts/Azonix.otf);
 }
+@font-face {
+  font-family: "Garet Book";
+  src: url(/src/fonts/Garet/Garet-Book.ttf);
+}
+@font-face {
+  font-family: "Nourd";
+  src: url(/src/fonts/Nourd/nourd_light.ttf);
+}
 ::-webkit-scrollbar {
   width: 1em;
 }
@@ -49,6 +57,14 @@
 @font-face {
   font-family: "Azonix";
   src: url(/src/fonts/Azonix.otf);
+}
+@font-face {
+  font-family: "Garet Book";
+  src: url(/src/fonts/Garet/Garet-Book.ttf);
+}
+@font-face {
+  font-family: "Nourd";
+  src: url(/src/fonts/Nourd/nourd_light.ttf);
 }
 .container {
   height: 100vh;
@@ -157,6 +173,14 @@
   font-family: "Azonix";
   src: url(/src/fonts/Azonix.otf);
 }
+@font-face {
+  font-family: "Garet Book";
+  src: url(/src/fonts/Garet/Garet-Book.ttf);
+}
+@font-face {
+  font-family: "Nourd";
+  src: url(/src/fonts/Nourd/nourd_light.ttf);
+}
 * {
   padding: 0;
   margin: 0;
@@ -165,12 +189,22 @@
 
 html {
   background-color: #1a1c1e;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   display: inline;
+}
+
+.point {
+  width: 10px;
+  height: 10px;
+  background-color: #f7a501;
+  border-radius: 50%;
+  border: 1px solid red;
+  z-index: 10;
 }
 
 menu {
@@ -189,16 +223,16 @@ menu {
 }
 
 menu #brand {
+  border: 1px solid red;
   text-align: center;
   margin: 2em 0;
 }
 menu #brand a > span {
-  color: #f7a501;
-  background-color: #1a1c1e;
+  color: #1a1c1e;
   display: block;
   padding: 0.2em 0;
   font-size: 1.3em;
-  font-family: "Open";
+  font-family: "Nourd";
 }
 
 #brand > span {
@@ -227,9 +261,11 @@ menu nav a:hover {
 
 menu .social {
   display: inherit;
+  border: 1px solid red;
   justify-content: center;
   list-style-type: none;
   gap: 4px;
+  margin-bottom: 2rem;
 }
 menu .social a {
   color: #1a1c1e;
@@ -487,21 +523,27 @@ menu #copyright {
 #myself .skill {
   width: -moz-fit-content;
   width: fit-content;
-  border: 2px solid red;
+  border: 2px solid #f7a501;
   width: 400px;
   padding: 1rem 5rem;
   filter: grayscale(1);
   display: flex;
   align-items: center;
   z-index: 1;
+  transform: skewX(-20deg);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 12px;
 }
 #myself .skill img {
-  width: 100px;
+  width: 80px;
+  transform: skewX(20deg);
 }
 #myself .skill:hover {
   filter: grayscale(0);
   transition: all 0.5s ease-in-out;
-  box-shadow: 0 0 75px 5px #f9f9f9 inset;
+  box-shadow: 0 0 10px #f7a501 inset;
 }
 
 progress {
@@ -512,7 +554,7 @@ progress {
   height: 7.5px;
 }
 
-progress[value]::-webkit-progress-bar {
+progress::-webkit-progress-bar {
   background-color: #eee;
   border-radius: 2px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
@@ -520,7 +562,7 @@ progress[value]::-webkit-progress-bar {
   transform-origin: 0 100%;
 }
 
-progress[value]::-webkit-progress-value {
+progress::-webkit-progress-value {
   border-radius: 2px;
   background-color: #f7a501;
 }
@@ -666,7 +708,7 @@ progress[value]::-webkit-progress-value {
 .projects .single-project .project-wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   min-height: 50vh;
   padding: 1em 1.5em;
@@ -715,7 +757,8 @@ progress[value]::-webkit-progress-value {
 .projects .single-project .project-information .description {
   background-color: rgba(249, 249, 249, 0.85);
   max-width: 500px;
-  min-height: 300px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   border-radius: 8px;
   padding: 2rem 3rem;
   color: #1a1c1e;
@@ -727,29 +770,44 @@ progress[value]::-webkit-progress-value {
   list-style: none;
   display: flex;
   justify-content: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 10px 0;
+  padding: 5px 13px;
+  border: 1.75px solid #1a1c1e;
+  border-radius: 4px;
+  border-left: 6px solid #1a1c1e;
+  border-right: 6px solid #1a1c1e;
 }
 .projects .single-project .project-information .language {
   font-size: 1em;
   color: #898989;
   font-family: "Azonix";
   letter-spacing: 5px;
-  margin: 10px 20px;
 }
 .projects .single-project .project-information .project-links {
   list-style: none;
   display: flex;
   justify-content: flex-end;
+  margin: 0 10px;
+  gap: 10px;
 }
 .projects .single-project .project-information .icon {
-  margin: 0 10px;
   font-size: 1.2em;
+  border-radius: 50%;
+  background-color: #1a1c1e;
+  transition: scale 0.5s ease-in-out;
+}
+.projects .single-project .project-information .icon:hover {
+  scale: 1.1;
 }
 .projects .single-project .project-information .icon a {
   text-decoration: none;
   color: #f7a501;
   display: block;
-  margin: 20px 10px;
+  margin: 10px;
   font-size: 1.2em;
 }
 .projects .single-project:nth-child(odd) .project-links {
@@ -759,6 +817,11 @@ progress[value]::-webkit-progress-value {
   justify-content: flex-start;
 }
 
+#contact .container-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 #contact h2 {
   font-size: 2.2em;
   margin-bottom: 1em;
@@ -784,4 +847,56 @@ progress[value]::-webkit-progress-value {
   font-family: "Allura";
   color: #898989;
   bottom: -10px;
+}
+#contact form {
+  display: flex;
+  flex-direction: column;
+  width: clamp(300px, 40vw, 40vw);
+}
+#contact form input,
+#contact form textarea {
+  margin-bottom: 2rem;
+  border: none;
+  border-bottom: 2.5px solid #f7a501;
+  background: none;
+  color: #f9f9f9;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+}
+#contact form input:focus,
+#contact form textarea:focus {
+  outline: 1px #1a1c1e solid;
+}
+#contact form input:-webkit-autofill,
+#contact form input:-webkit-autofill:hover,
+#contact form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 40rem #1a1c1e inset;
+  -webkit-text-fill-color: #f9f9f9;
+  caret-color: #f9f9f9;
+}
+#contact form input[type=submit] {
+  width: 65%;
+  margin: 2rem auto;
+  border: 2.5px solid #f7a501;
+  padding: 1.2rem 0;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 12px;
+  transition: all 0.5s ease-in-out;
+}
+#contact form input[type=submit]:hover {
+  scale: 1.05;
+  background-color: #f7a501;
+  color: #1a1c1e;
+  font-weight: bold;
+}
+
+#hideForm {
+  position: absolute;
+  font-size: 4.5em;
+  opacity: 0.35;
+  color: #f7a501;
+  z-index: 0;
+  font-family: "Azonix";
 }/*# sourceMappingURL=style.css.map */

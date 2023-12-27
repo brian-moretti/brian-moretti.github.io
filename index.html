@@ -14,8 +14,13 @@
       src="https://kit.fontawesome.com/d2cc7bd70b.js"
       crossorigin="anonymous"
     ></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
+
+    <div class="mouse point"></div>
+    <div class="mouse round"></div>
+
     <!--   <div class="container">
       <span class="textLoader"></span>
     </div> -->
@@ -196,9 +201,27 @@
 <!--     </section> -->
     <section id="contact" class="section">
 <!--       <div class="containerElements"> -->
+  <h2 class="title">Contattami</h2>
   <div class="container-page">
+<div class="form-container">
+  <form id="contact-form">
+    <input type="hidden" name="contact-number">
+    <label for="name"></label>
+    <input required id="name" name="name" type="text" placeholder="Nome e Cognome">
+    <label for="email"></label>
+    <input required type="email" name="email" id="email" placeholder="Email">
+    <label for="message"></label>
+    <textarea required name="message" id="message" cols="15" rows="5" wrap="hard" placeholder="Messaggio"></textarea>
+    <input type="submit" value="INVIA">
+  </form>
+</div>
+<div class="contact-module"></div>
+<div class="image-profile"> <img src="https://placehold.co/600x400" alt=""></div>
+<span id="hideForm">&#64;</span>
 
-    <h2 class="title">Contattami</h2>
+</div>
+
+
     <p class="textP">
       <span>Vuoi realizzare un Sito Web per la tua attività?</span>
       <span>Hai bisogno di una vetrina per il tuo Business?</span>
@@ -230,13 +253,16 @@
         </div>
         <span id="hideForm">&#64;</span>
       </div>
-    </div>
       <!-- <div id="bottom"> -->
         <span class="bottom-tag">&lt;/html&gt;</span>
 <!--       </div> -->
     </section>
     <!--     </div>  -->
     <script type="module" src="main.js"></script>
+    <script type="module" src="form.js"></script>
     <script type="module" src="/src/js/projectPage.js"></script>
+    <script type="text/javascript">
+      console.log(this.contact_number);
+    </script>
   </body>
 </html>

@@ -9,6 +9,9 @@ import {
   portfolioWebsite,
   counterOfStars,
   theBookCamp,
+  s2iNTTData,
+  cityClue,
+  flightsFootprint,
 } from "../images/master-project/master-project";
 //import { footer } from "./copyright";
 
@@ -46,8 +49,8 @@ let projectHTMLCSS = new Project(
   "https://project-portfolio-website.netlify.app/",
   portfolioWebsite,
   "Portfolio Website",
-  ` La creazione di un Sito Web (Portfolio) personale utilizzando
-  solo HTML & CSS.<br/>Il progetto è strutturato in un'unica pagina.
+  `La creazione di un Sito Web (Portfolio) personale utilizzando
+  solo HTML & CSS.<br/>Il progetto è strutturato in un'unica pagina.<br/>
   I link del menu sono definiti attraverso un archor tag.`,
   ["HTML", "CSS"],
   "https://github.com/brian-moretti/HTML-CSS-Project"
@@ -59,8 +62,7 @@ let projectCounter = new Project(
   "https://counter-of-stars.netlify.app/",
   counterOfStars,
   "Counter App",
-  `Un' applicazione che funziona da counter tramite l'interazione
-     con dei pulsanti di incremento/decremento del valore. Tutti gli elementi dell'applicazione sono stati implementati esclusivamente con Javascript (nessun uso di framework o librerie esterne)`,
+  `Un'applicazione che funziona come counter. L'interazione con i pulsanti permettono di aumentare, diminuire o resettare il valore.<br/>Tutti gli elementi dell'applicazione sono stati implementati esclusivamente con Javascript (nessun uso di framework o librerie esterne)`,
   ["HTML", "CSS", "JAVASCRIPT"],
   "https://github.com/brian-moretti/JavaScript-Basic-Project"
 );
@@ -71,23 +73,65 @@ let projectBooks = new Project(
   "https://the-book-camp.netlify.app/",
   theBookCamp,
   "The Book Camp",
-  `<em>Un'applicazione per incentivare la lettura di libri.</em><br/>L'applicazione si collega, mediante una chiamata fetch, all'API del servizio esterno <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a>, grazie al quale l'utente può cercare una specifica categoria di libri e visualizzarne il titolo, l'autore, la copertina, e una descrizione (se provviste).`,
+  `<em>"Un'applicazione per incentivare la lettura di libri."</em><br/>L'applicazione si collega, mediante una chiamata fetch, all'API del servizio esterno <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer">Open Library</a>, grazie al quale l'utente può cercare una specifica categoria di libri e visualizzarne, se provviste, il titolo, l'autore, la copertina, e una descrizione.`,
   ["HTML", "CSS", "JAVASCRIPT"],
   "https://github.com/brian-moretti/JavaScript-Advanced-Project"
 );
 
-let arrayProject = [projectHTMLCSS, projectCounter, projectBooks];
+let projectAngularNTTData = new Project(
+  4,
+  "Progetto Angular | NTT Data Partnership",
+  "https://s2i-nttdata.web.app/auth",
+  s2iNTTData,
+  "Go Rest a Post",
+  `Un'applicazione, protetta da autenticazione, che permette all'utente di visualizzare la lista di utenti, creare/cancellare "nuovi utenti", visualizzarne i dettagli, visualizzare la lista dei post, creare/cancellare dei post per ciascun utente e creare/cancellare commenti sotto ciascun post`,
+  ["ANGULAR", "TYPESCRIPT", "PRIME-NG", "FIREBASE"],
+  "https://github.com/brian-moretti/angular-gorest"
+);
+
+let projectAngular = new Project(
+  5,
+  "Progetto Angular 2",
+  "https://city-clue.web.app/cities",
+  cityClue,
+  "City Clue",
+  `Un'applicazione che permette all'utente di selezionare una città e di visualizzarne una foto, una descrizione e i punteggi sulla qualità della vita prelevati dall'API <a href="http://openlibrary.org" target="_blank" rel="noopener noreferrer"></a>`,
+  ["ANGULAR", "TYPESCRIPT", "PRIMENG", "FIREBASE"],
+  "https://github.com/brian-moretti/city-clue"
+);
+
+let finalFrontEndProject = new Project(
+  6,
+  "Progetto Finale | Master Front-End",
+  "https://flights-footprint.web.app/footprint",
+  flightsFootprint,
+  "Flights Footprint",
+  `Un'applicazione che permette all'utente di calcolare le emissioni di CO2e decidendo `,
+  ["ANGULAR", "TYPESCRIPT", "CHARTJS", "CIRCLETYPEJS", "FIREBASE"],
+  "https://github.com/brian-moretti/flights-footprint"
+);
+
+let phpMySqlProject = new Project(7, "Progetto PHP & MySql");
+
+let arrayProject = [
+  projectHTMLCSS,
+  projectCounter,
+  projectBooks,
+  projectAngularNTTData,
+  projectAngular,
+  finalFrontEndProject,
+];
 
 function createProject(project) {
   const projectList = document.querySelector(".project-list");
   const singleProject = createElement("li", "single-project", projectList);
 
- //console.log(singleProject.offsetWidth);
+  //console.log(singleProject.offsetWidth);
 
   let titleProject = createElement("h3", "title-project", singleProject);
   titleProject.textContent = project.title;
 
-/*   if (project.id % 2 != 0) {
+  /*   if (project.id % 2 != 0) {
     let spanId = createOddElement("span", "number", titleProject);
     spanId.textContent = project.id;
   } else {
